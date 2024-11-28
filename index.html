@@ -1,0 +1,1029 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Online Library </title>
+
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+
+
+    <link href='https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css'>
+    <link rel="icon" href="images/Logo .png">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/fontawesome-free-5.11.2-web/css/all.min.css">
+    <link rel="stylesheet" href="css/bootstrap-4.3.1-dist/css/bootstrap.min.css">
+</head>
+
+<body>
+    <header>
+        <div class="container  mt-5 ">
+            <div class="row align-items-center w-100 mt-3 mt-lg-0 mt-md-0 pl-3">
+                <div class="col-lg-9 w-100 pr-0 d-flex">
+                    <a class="navbar-brand  text--five ml-2 mr-0 d-none d-lg-block " href="/index.html"><img src="images/Logo .png" class="w-75" alt=""></a>
+                    <div class="bg--four d-flex  rounded   w-100 ">
+                        <div class="dropdown bg--three rounded " style="width: 250px !important; height: 40px !important;">
+                            <a class="nav-link text--five ml-lg-3 d-flex align-items-center pl-2 px-0 An_trial " style="font-size: 22px !important;" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">All catagories <i class="fa fa-angle-down ml-lg-2 ml-2  " style="font-size: 15px;"></i></a>
+                            <div class="dropdown-menu border-0 shadow bg--three text--five" aria-labelledby="navbarDropdown">
+                                <a class="dropdown-item" href="#">BCS</a>
+                                <a class="dropdown-item" href="#">BBA</a>
+                                <a class="dropdown-item" href="#">ENG</a>
+                            </div>
+                        </div>
+                        <div class="input-group rounded  d-flex align-items-center w-100 ">
+                            <input type="text" class="form-control border-0 bg--four An_light py-0" style="font-size: 18px;" id="inlineFormInputGroupUsername2" placeholder="Search by name, author, title">
+                            <div class="input-group-addon  border-0  pr-2"><a href="#" class="my-auto"><i class="fas fa-search text-muted"></i></a></div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-3  pr-0 ">
+                    <div class="d-flex  w-100 mt-3 mt-lg-0  justify-content-between justify-content-lg-start  ">
+                        <!-- Sign up button
+                             <a href="/sign.html"><button class="btn btn-primary bg--one border-0 py-2 px-3  ml-lg-2 ml-md-2 An_Dm_bold" style="font-size: 18px;">Sign up</button></a>
+                       -->
+
+                        <a href="/profile.html" class="nav-link m-0 p-0"><button class="bg-light text--two rounded  py-2 px-4  ml-lg-1 ml-md-2 An_Dm_bold" style="font-size: 18px; border: 1.5px solid #006699 !important;">Profile</button></a>
+
+                        <!-- Button trigger modal -->
+                        <button type="button" class="btn ml-auto btn-primary bg--two border-0 py-2 ml-4 px-3 An_Dm_bold" style="font-size: 18px;" data-toggle="modal" data-target="#exampleModal1">Add New Book</button>
+                        <!-- Modal -->
+                        <div class="modal fade  bg--opcity pr-0  " id="exampleModal1" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                            <div class="modal-dialog  " style=" max-width: 800px !important;" role="document">
+                                <div class="modal-content p-0 border-0">
+                                    <div class="modal-header text-center  bg--two align-items-center border-0 py-2 ">
+                                        <h4 class=" mb-0 text-white text-center w-100 an_bold pt-2" id="exampleModalLabel">Add New Book </h5>
+
+                                            <a href=""><i class="fa fa-window-close text-white" data-dismiss="modal"></i></a>
+                                    </div>
+                                    <div class="modal-body bg--four rounded">
+                                        <form class="px-4">
+                                            <div class="form-group">
+                                                <label for="exampleInputEmail1"><b class="an_bold">Book Full Name <span class="text-danger">*</span></b></label>
+                                                <textarea class="form-control  shadow rounded" placeholder="Book Full Name" id="exampleFormControlTextarea1" rows="2"></textarea>
+                                            </div>
+                                            <div class="form-group">
+                                                <label for="exampleInputEmail1"><b  class="an_bold">Author <span class="text-danger">*</span></b></label>
+                                                <input type="text" class="form-control  shadow rounded" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Author Full Name">
+                                            </div>
+                                            <div class="form-group row  mx-0 ">
+                                                <div class="col-lg-6 col-md-6 col-sm-12 col-12 pr-lg-5 p-0">
+                                                    <label for="exampleInputEmail1"><b  class="an_bold">Number of pages and sessions <span class="text-danger">*</span></b></label>
+                                                    <div class="row mx-0">
+                                                        <div class="bg-light p-2 rounded shadow d-flex w-100 ">
+                                                            <div class="d-flex align-items-center w-100 ">
+
+                                                                <input type="number" class="form-control form-control-sm  bg--four  " id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="0 ... ">
+                                                                <label for="exampleInputEmail1" class="mb-0 mx-1 pr-3 ">Pages</label>
+                                                            </div>
+                                                            <div class="d-flex align-items-center w-100  ">
+                                                                <input type="number" class="form-control form-control-sm  bg--four  " id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="0 ...">
+                                                                <label for="exampleInputEmail1" class="mb-0 mx-1">sessions</label>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="col-lg-3 col-md-3 col-sm-6 col-6 pl-0 pr-lg-5 mt-3 mt-lg-0 mt-md-0">
+                                                    <label for="exampleInputEmail1"><b  class="an_bold">Edition <span class="text-danger">*</span></b></label>
+                                                    <div class="row mx-0">
+                                                        <div class="bg-light p-2 rounded shadow d-flex">
+                                                            <div class="d-flex align-items-center ">
+                                                                <input type="number" class="form-control form-control-sm  bg--four w-100 " id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="0 ... ">
+                                                                <label for="exampleInputEmail1" class="mb-0 mx-1">th</label>
+                                                            </div>
+
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="col-lg-3 col-md-3 col-sm-6 col-6 pl-0 pr-lg-5 pr-0 mt-3 mt-lg-0 mt-md-0 "> <label for="exampleInputEmail1"><b  class="an_bold">Year of publish <span class="text-danger">*</span></b></label>
+
+                                                    <div class="bg-light p-2 rounded shadow w-100">
+                                                        <div class="d-flex align-items-center ">
+                                                            <input type="number" class="form-control form-control-sm  bg--four w-100 " id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="0 ... ">
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="form-group">
+                                                <label for="exampleInputEmail1"><b  class="an_bold">About Author</b></label>
+                                                <textarea class="form-control form-control-sm rounded shadow" placeholder="Example: waris jan please add a simple sentance here to ...." id="exampleFormControlTextarea1" rows="6"></textarea>
+                                                <div class="text-right pr-3 pt-2 text-muted">
+                                                    <h6>0/1000</h6>
+                                                </div>
+                                            </div>
+                                            <div class="form-group">
+                                                <label for="exampleInputEmail1"><b  class="an_bold">About Book </b></label>
+                                                <textarea class="form-control form-control-sm rounded shadow" placeholder="Example: waris jan please add a simple sentance here to ...." id="exampleFormControlTextarea1" rows="6"></textarea>
+                                                <div class="text-right pr-3 pt-2 text-muted">
+                                                    <h6>0/1000</h6>
+                                                </div>
+                                            </div>
+                                            <div class="form-group w-25">
+                                                <label for="exampleFormControlSelect1"><b  class="an_bold">Department <span class="text-danger">*</span></b></label>
+                                                <select class="form-control" id="exampleFormControlSelect1">
+                                                  <option>Computer Sience</option>
+                                                  <option>Engineering</option>
+                                                  <option>BBA</option>
+                                                </select>
+                                            </div>
+                                            <div class="form-group mt-3">
+                                                <label for="exampleInputEmail1"><b  class="an_bold">Catagories <span class="text-danger">*</span></b> <small>(Minimum 1 and Muximum 5)</small></label>
+                                                <div class=" p-4 bg-white shadow rounded row mx-0">
+                                                    <a href="#" class="bg--four px-2 rounded  nav-link py-1 text--seven m-1 An_trial ">CyberSecurity</a>
+                                                    <a href="#" class="bg--four px-2 rounded  nav-link py-1 text--seven m-1 An_trial">IT</a>
+                                                    <a href="#" class="bg--two  px-2 rounded  nav-link py-1 text-white m-1 An_trial">Programing</a>
+                                                    <a href="#" class="bg--four px-2 rounded  nav-link py-1 text--seven m-1 An_trial">Sychology</a>
+                                                    <a href="#" class="bg--four px-2 rounded  nav-link py-1 text--seven m-1 An_trial">History</a>
+                                                    <a href="#" class="bg--four px-2 rounded  nav-link py-1 text--seven m-1 An_trial">Calture</a>
+                                                    <a href="#" class="bg--four px-2 rounded  nav-link py-1 text--seven m-1 An_trial">life</a>
+                                                    <a href="#" class="bg--two  px-2 rounded  nav-link py-1 text-white m-1 An_trial">Engineering</a>
+                                                    <a href="#" class="bg--four px-2 rounded  nav-link py-1 text--seven m-1 An_trial">CyberSecurity</a>
+                                                    <a href="#" class="bg--four px-2 rounded  nav-link py-1 text--seven m-1 An_trial">IT</a>
+                                                    <a href="#" class="bg--four px-2 rounded  nav-link py-1 text--seven m-1 An_trial">Programing</a>
+                                                    <a href="#" class="bg--four px-2 rounded  nav-link py-1 text--seven m-1 An_trial">Sychology</a>
+                                                    <a href="#" class="bg--four px-2 rounded  nav-link py-1 text--seven m-1 An_trial">History</a>
+                                                    <a href="#" class="bg--four px-2 rounded  nav-link py-1 text--seven m-1 An_trial">Calture</a>
+                                                    <a href="#" class="bg--four px-2 rounded  nav-link py-1 text--seven m-1 An_trial">life</a>
+                                                    <a href="#" class="bg--four px-2 rounded  nav-link py-1 text--seven m-1 An_trial">Engineering</a>
+                                                    <a href="#" class="bg--four px-2 rounded  nav-link py-1 text--seven m-1 An_trial">CyberSecurity</a>
+                                                    <a href="#" class="bg--four px-2 rounded  nav-link py-1 text--seven m-1 An_trial">IT</a>
+                                                    <a href="#" class="bg--four px-2 rounded  nav-link py-1 text--seven m-1 An_trial">Programing</a>
+                                                    <a href="#" class="bg--four px-2 rounded  nav-link py-1 text--seven m-1 An_trial">Sychology</a>
+                                                    <a href="#" class="bg--four px-2 rounded  nav-link py-1 text--seven m-1 An_trial">History</a>
+                                                    <a href="#" class="bg--four px-2 rounded  nav-link py-1 text--seven m-1 An_trial">Calture</a>
+                                                    <a href="#" class="bg--four px-2 rounded  nav-link py-1 text--seven m-1 An_trial">life</a>
+                                                    <a href="#" class="bg--four px-2 rounded  nav-link py-1 text--seven m-1 An_trial">Engineering</a>
+                                                    <a href="#" class="bg--four px-2 rounded  nav-link py-1 text--seven m-1 An_trial">CyberSecurity</a>
+                                                    <a href="#" class="bg--four px-2 rounded  nav-link py-1 text--seven m-1 An_trial">IT</a>
+                                                    <a href="#" class="bg--four px-2 rounded  nav-link py-1 text--seven m-1 An_trial">Programing</a>
+                                                    <a href="#" class="bg--four px-2 rounded  nav-link py-1 text--seven m-1 An_trial">Sychology</a>
+                                                    <a href="#" class="bg--four px-2 rounded  nav-link py-1 text--seven m-1 An_trial">History</a>
+                                                    <a href="#" class="bg--four px-2 rounded  nav-link py-1 text--seven m-1 An_trial">Calture</a>
+                                                    <a href="#" class="bg--four px-2 rounded  nav-link py-1 text--seven m-1 An_trial">life</a>
+                                                    <a href="#" class="bg--four px-2 rounded  nav-link py-1 text--seven m-1 An_trial">Engineering</a>
+                                                </div>
+                                                <div class="text-right pr-3 pt-2 text-muted">
+                                                    <h6>2/5</h6>
+                                                </div>
+                                            </div>
+                                            <div class="form-group w-75">
+                                                <label for="exampleFormControlFile1"><b  class="an_bold">Book</b> <small>(pdf file)</small></label>
+
+                                                <div class="w-100 d-flex align-items-center">
+                                                    <label class="custom-file border-0 shadow rounded small bg--two mr-3 text-white w-25 text-center pb-0 pt-1 " style="
+                                                    cursor: pointer;
+                                                ">Upload 
+                                                        <input type="file" id="file2" class="custom-file-input">
+                                                        <span class="custom-file-control"></span>
+                                                      </label>
+                                                    <small>*Note: File size should not be more then 60 MB</small>
+                                                </div>
+                                                <label for="exampleFormControlFile1" class="mt-3">Uploaded: file name which is Uploaded</label>
+                                                <div class="d-flex">
+                                                    <a href="#" class="text--two nav-link p-0">View</a>
+                                                    <a href="#" class="ml-3 text-danger nav-link p-0 ">Delete</a>
+                                                </div>
+                                            </div>
+
+                                            <div class="form-group w-75 mt-4">
+                                                <label for="exampleFormControlFile1"><b class="an_bold">Cover</b> <small>(Jpg, Png, Pdf)</small></label>
+
+                                                <div class="w-100 d-flex align-items-center">
+                                                    <label class="custom-file border-0 shadow rounded small bg--two mr-3 text-white w-25 text-center pb-0 pt-1 " style="
+                                                    cursor: pointer;
+                                                ">Upload 
+                                                        <input type="file" id="file2" class="custom-file-input">
+                                                        <span class="custom-file-control"></span>
+                                                      </label>
+                                                    <small>*Note: File size should be between 500 KB and 2 MB</small>
+                                                </div>
+                                                <label for="exampleFormControlFile1" class="mt-3">Uploaded: file name which is Uploaded</label>
+                                                <div>
+                                                    <img src="images/book 1.png" class="w-25 rounded shadow" alt="">
+                                                </div>
+                                                <a href="#" class="mt-2 text-danger nav-link p-0 ">Delete</a>
+                                            </div>
+                                            <div class="row ml-auto w-100 justify-content-end mr-5 mt-3">
+                                                <button type="button" class="btn btn-primary bg--two border-0  px-5 py-1 btn-sm ">Finsh</button>
+                                            </div>
+
+                                        </form>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- End Modal -->
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="container">
+            <nav class="navbar navbar-expand-lg navbar-light mt-4 ">
+                <a class="navbar-brand mr-4 d-lg-none" href="/index.html"><img src="images/Logo .png" class="w-75" alt=""></a>
+                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                  <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse   ml-lg-4 pl-lg-2 " id="navbarSupportedContent">
+                    <ul class="navbar-nav mx-auto">
+                        <li class="nav-item mx-2 text-center">
+                            <a class="nav-link text--five pb-0 An_trial" href="/.index.html" style="font-size: 29px; ">Home</a>
+                            <small><small><span class="fa fa-circle  "></span></small></small>
+                        </li>
+                        <li class="nav-item mx-2 text-center">
+                            <a class="nav-link text--one An_trial pb-0" style="font-size: 29px; " href="./books.html">Books </a>
+                        </li>
+                        <li class="nav-item mx-2 text-center">
+                            <a class="nav-link text--one An_trial pb-0" style="font-size: 29px;" href="./audio.html">AudioBook </a>
+                        </li>
+                        <li class="nav-item mx-2 text-center">
+                            <a class="nav-link text--one An_trial pb-0" style="font-size: 29px; " href="./articles.html">Articles</a>
+                        </li>
+                       
+                        <li class="nav-item mx-2 text-center">
+                            <a class="nav-link text--one An_trial pb-0" style="font-size: 29px;" href="./contact.html">Contacts</a>
+                        </li>
+
+                    </ul>
+                </div>
+            </nav>
+        </div>
+    </header>
+    <section class="pt-5 bg--eight">
+        <div class="container ">
+            <div class="bg ml-lg-4 ">
+                <div class="row pl-5 ">
+                    <div class="col-lg-7 col-md-8 col-sm-10 col-12 p-5 ">
+                        <h2 class="an_bold" style="font-size: 48px;"><b>SALAM UNIVERSITY ONLINE BOOK LIBRARY</b></h2>
+                        <p class="An_light" style="font-size: 20px !important;">Lorem ipsum dolor sit amet consectetur adipisicing elit. Neque aliquid corporis, et deleniti, laborum nam animi officia, molestiae vero ipsam iure corrupti.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section class=" py-5 bg--eight ">
+        <div class="container  ">
+            <div class="row mx-2">
+                <div class="col-lg-3 col-md-3 col-12 col-12  ">
+                    <div class=" px-3 pt-2 shadow " style="border-radius: 15px;    padding-bottom: 380px; ">
+                        <a href="/books.html" class="text--seven nav-link p-0">
+                            <div class="bg--four px-2 py-0 d-flex justify-content-between align-items-center" style="border-radius: 15px;">
+                                <h5 class="py-1 pb-0 mb-0 text--seven An_trial">Computer Sience</h5>
+                                <h5 class="py-1 pb-0 mb-0"><small>256</small></h5>
+                            </div>
+                        </a>
+                        <a href="/books.html" class="text--seven nav-link p-0">
+                            <div class="bg--four mt-1 px-2 d-flex justify-content-between align-items-center" style="border-radius: 15px;">
+                                <h5 class="py-1 pb-0 mb-0 text--seven An_trial">Engineering</h5>
+                                <h5 class="py-1 pb-0 mb-0"><small>112</small></h5>
+                            </div>
+                        </a>
+                        <a href="/books.html" class="text--seven nav-link p-0">
+                            <div class="bg--four mt-1 px-2 d-flex justify-content-between align-items-center" style="border-radius: 15px;">
+                                <h5 class="py-1 pb-0 mb-0 text--seven An_trial">Law and Politics</h5>
+                                <h5 class="py-1 pb-0 mb-0"><small>318</small></h5>
+                            </div>
+                        </a>
+                        <a href="/books.html" class="text--seven nav-link p-0">
+                            <div class="bg--four mt-1 px-2 d-flex justify-content-between align-items-center" style="border-radius: 15px;">
+                                <h5 class="py-1 pb-0 mb-0 text--seven An_trial">Economics</h5>
+                                <h5 class="py-1 pb-0 mb-0"><small>716</small></h5>
+                            </div>
+                        </a>
+                        <a href="/books.html" class="text--seven nav-link p-0">
+                            <div class="bg--four mt-1 px-2 d-flex justify-content-between align-items-center" style="border-radius: 15px;">
+                                <h5 class="py-1 pb-0 mb-0 text--seven An_trial">Shariyat</h5>
+                                <h5 class="py-1 pb-0 mb-0"><small>917</small></h5>
+                            </div>
+                        </a>
+                        <a href="/books.html" class="text--seven nav-link p-0">
+                            <div class="bg--four mt-1 px-2 d-flex justify-content-between align-items-center" style="border-radius: 15px;">
+                                <h5 class="py-1 pb-0 mb-0 text--seven An_trial">Nature</h5>
+                                <h5 class="py-1 pb-0 mb-0"><small>124</small></h5>
+                            </div>
+                        </a>
+                        <a href="/books.html" class="text--seven nav-link p-0">
+                            <div class="bg--four mt-1 px-2 d-flex justify-content-between align-items-center" style="border-radius: 15px;">
+                                <h5 class="py-1 pb-0 mb-0 text--seven An_trial">Physics</h5>
+                                <h5 class="py-1 pb-0 mb-0"><small>86</small></h5>
+                            </div>
+                        </a>
+                        <a href="/books.html" class="text--seven nav-link p-0">
+                            <div class="bg--four mt-1 px-2 d-flex justify-content-between align-items-center" style="border-radius: 15px;">
+                                <h5 class="py-1 pb-0 mb-0 text--seven An_trial">Bilogy</h5>
+                                <h5 class="py-1 pb-0 mb-0"><small>93</small></h5>
+                            </div>
+                        </a>
+                        <a href="/books.html" class="text--seven nav-link p-0">
+                            <div class="bg--four mt-1 px-2 d-flex justify-content-between align-items-center" style="border-radius: 15px;">
+                                <h5 class="py-1 pb-0 mb-0 text--seven An_trial">History</h5>
+                                <h5 class="py-1 pb-0 mb-0"><small>512</small></h5>
+                            </div>
+                        </a>
+                        <a href="/books.html" class="text--seven nav-link p-0">
+                            <div class="bg--four px-2 mt-1 py-0 d-flex justify-content-between align-items-center" style="border-radius: 15px;">
+                                <h5 class="py-1 pb-0 mb-0 text--seven An_trial">Computer Sience</h5>
+                                <h5 class="py-1 pb-0 mb-0"><small>256</small></h5>
+                            </div>
+                        </a>
+                        <a href="/books.html" class="text--seven nav-link p-0">
+                            <div class="bg--four mt-1 px-2 d-flex justify-content-between align-items-center" style="border-radius: 15px;">
+                                <h5 class="py-1 pb-0 mb-0 text--seven An_trial">Engineering</h5>
+                                <h5 class="py-1 pb-0 mb-0"><small>112</small></h5>
+                            </div>
+                        </a>
+                        <a href="/books.html" class="text--seven nav-link p-0">
+                            <div class="bg--four mt-1 px-2 d-flex justify-content-between align-items-center" style="border-radius: 15px;">
+                                <h5 class="py-1 pb-0 mb-0 text--seven An_trial">Law and Politics</h5>
+                                <h5 class="py-1 pb-0 mb-0"><small>318</small></h5>
+                            </div>
+                        </a>
+                        <a href="/books.html" class="text--seven nav-link p-0">
+                            <div class="bg--four mt-1 px-2 d-flex justify-content-between align-items-center" style="border-radius: 15px;">
+                                <h5 class="py-1 pb-0 mb-0 text--seven An_trial">Economics</h5>
+                                <h5 class="py-1 pb-0 mb-0"><small>716</small></h5>
+                            </div>
+                        </a>
+                        <a href="/books.html" class="text--seven nav-link p-0">
+                            <div class="bg--four mt-1 px-2 d-flex justify-content-between align-items-center" style="border-radius: 15px;">
+                                <h5 class="py-1 pb-0 mb-0 text--seven An_trial">Shariyat</h5>
+                                <h5 class="py-1 pb-0 mb-0"><small>917</small></h5>
+                            </div>
+                        </a>
+                        <a href="/books.html" class="text--seven nav-link p-0">
+                            <div class="bg--four mt-1 px-2 d-flex justify-content-between align-items-center" style="border-radius: 15px;">
+                                <h5 class="py-1 pb-0 mb-0 text--seven An_trial">Nature</h5>
+                                <h5 class="py-1 pb-0 mb-0"><small>124</small></h5>
+                            </div>
+                        </a>
+                        <a href="/books.html" class="text--seven nav-link p-0">
+                            <div class="bg--four mt-1 px-2 d-flex justify-content-between align-items-center" style="border-radius: 15px;">
+                                <h5 class="py-1 pb-0 mb-0 text--seven An_trial">Physics</h5>
+                                <h5 class="py-1 pb-0 mb-0"><small>86</small></h5>
+                            </div>
+                        </a>
+                        <a href="/books.html" class="text--seven nav-link p-0">
+                            <div class="bg--four mt-1 px-2 d-flex justify-content-between align-items-center" style="border-radius: 15px;">
+                                <h5 class="py-1 pb-0 mb-0 text--seven An_trial">Bilogy</h5>
+                                <h5 class="py-1 pb-0 mb-0"><small>93</small></h5>
+                            </div>
+                        </a>
+                        <a href="/books.html" class="text--seven nav-link p-0">
+                            <div class=" bg--four mt-1 px-2 d-flex justify-content-between align-items-center" style="border-radius: 15px;">
+                                <h5 class="py-1 pb-0 mb-0 text--seven An_trial">History</h5>
+                                <h5 class="py-1 pb-0 mb-0"><small>512</small></h5>
+                            </div>
+                        </a>
+                    </div>
+                </div>
+                <div class="col-lg-9 col-md-9 col-sm-12 col-12 mt-5 mt-lg-0 mt-md-0 ">
+                    <div>
+                        <h4 class="an_bold">Most Popular Books</h4>
+                    </div>
+                    <div class="row ">
+                        <a href="#" class="text--seven ">
+                            <div class="bg--eight px-3 py-2 rounded-circle  shadow" style="position: relative; height: fit-content ; z-index: 1; top: 100px !important;">
+                                <small><i class="fa fa-angle-left fa-2x p-0 m-0  mt-1"></i></small>
+                            </div>
+                        </a>
+                        <div class="d-flex py-2 mx-3" style="overflow-x: scroll; margin-top: -40px !important; margin-bottom: -60px !important;">
+                            <div class="col-lg-3 col-md-5 col-sm-6 col-6 ">
+                                <div class="product-item-wrap">
+                                    <div class="product-item position-relative">
+                                        <img src="images/book 1.png" alt="" class="img-fluid w-100  shadow" style="border-radius: 20px; height:223px !important;">
+                                        <div class="product-img-hover pt-5">
+                                            <ul class=" list-inline text-center pl-2 ">
+                                                <a href="BookViewPage.html"><button class="btn--outline--secondary px-4 pt-1 pb-0 an_bold " style="font-size: 18px;" ><b>View</b></button></a>
+                                                <h5 class="mt-2 text-white text-left an_bold">Book's Full Name Here</h6>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-lg-3 col-md-5 col-sm-6 col-6  ">
+                                <div class="product-item-wrap ">
+                                    <div class="product-item position-relative">
+                                        <img src="images/book 2.png" alt="" class="img-fluid w-100  shadow" style="border-radius: 20px; height:223px !important;">
+                                        <div class="product-img-hover pt-5">
+                                            <ul class=" list-inline text-center pl-2 ">
+                                                <a href="BookViewPage.html"><button class="btn--outline--secondary px-4 pt-1 pb-0 an_bold " style="font-size: 18px;" ><b>View</b></button></a>
+                                                <h5 class="mt-2 text-white text-left an_bold">Book's Full Name Here</h6>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-lg-3 col-md-5 col-sm-6 col-6 ">
+                                <div class="product-item-wrap ">
+                                    <div class="product-item position-relative">
+                                        <img src="images/book 3.jpg" alt="" class="img-fluid w-100  shadow" style="border-radius: 20px; height:223px !important;">
+                                        <div class="product-img-hover pt-5">
+                                            <ul class=" list-inline text-center pl-2 ">
+                                                <a href="BookViewPage.html"><button class="btn--outline--secondary px-4 pt-1 pb-0 an_bold " style="font-size: 18px;" ><b>View</b></button></a>
+                                                <h5 class="mt-2 text-white text-left an_bold">Book's Full Name Here</h6>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-lg-3 col-md-5 col-sm-6 col-6  ">
+                                <div class="product-item-wrap ">
+                                    <div class="product-item position-relative">
+                                        <img src="images/book 4.jpg" alt="" class="img-fluid w-100  shadow" style="border-radius: 20px; height:223px !important;">
+                                        <div class="product-img-hover pt-5">
+                                            <ul class=" list-inline text-center pl-2 ">
+                                                <a href="BookViewPage.html"><button class="btn--outline--secondary px-4 pt-1 pb-0 an_bold " style="font-size: 18px;" ><b>View</b></button></a>
+                                                <h5 class="mt-2 text-white text-left an_bold">Book's Full Name Here</h6>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-lg-3 col-md-5 col-sm-6 col-6  ">
+                                <div class="product-item-wrap ">
+                                    <div class="product-item position-relative">
+                                        <img src="images/book 4.jpg" alt="" class="img-fluid w-100  shadow" style="border-radius: 20px; height:223px !important;">
+                                        <div class="product-img-hover pt-5">
+                                            <ul class=" list-inline text-center pl-2 ">
+                                                <a href="BookViewPage.html"><button class="btn--outline--secondary px-4 pt-1 pb-0 an_bold " style="font-size: 18px;" ><b>View</b></button></a>
+                                                <h5 class="mt-2 text-white text-left an_bold">Book's Full Name Here</h6>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <a href="#" class="text--seven  ml-auto">
+                            <div class="bg--eight px-3 py-2 rounded-circle shadow " style="position: relative; height: fit-content ; z-index: 1; top: -100px !important;">
+                                <small><i class="fa fa-angle-right fa-2x p-0 m-0 mt-1 "></i></small>
+                            </div>
+                        </a>
+                    </div>
+                    <div>
+                        <hr class="mt-5 ">
+                        <h4 class="an_bold">Recently Upload Books</h4>
+                    </div>
+                    <div class="row  ">
+                        <a href="#" class="text--seven ">
+                            <div class="bg--eight px-3 py-2 rounded-circle shadow" style="position: relative; height: fit-content ; z-index: 1; top: 100px !important;">
+                                <small><i class="fa fa-angle-left fa-2x p-0 m-0 mt-1 "></i></small>
+                            </div>
+                        </a>
+                        <div class="d-flex py-2 mx-3" style="overflow-x: scroll; margin-top: -40px !important; margin-bottom: -60px !important;">
+                            <div class="col-lg-3 col-md-5 col-sm-6 col-6 ">
+                                <div class="product-item-wrap">
+                                    <div class="product-item position-relative">
+                                        <img src="images/economic book.jpg" alt="" class="img-fluid w-100  shadow" style="border-radius: 20px; height:223px !important;">
+                                        <div class="product-img-hover pt-5">
+                                            <ul class=" list-inline text-center pl-2 ">
+                                                <a href="BookViewPage.html"><button class="btn--outline--secondary px-4 pt-1 pb-0 an_bold " style="font-size: 18px;" ><b>View</b></button></a>
+                                                <h5 class="mt-2 text-white text-left an_bold">Book's Full Name Here</h6>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-lg-3 col-md-5 col-sm-6 col-6 ">
+                                <div class="product-item-wrap ">
+                                    <div class="product-item position-relative">
+                                        <img src="images/economic book1.jpg" alt="" class="img-fluid w-100  shadow" style="border-radius: 20px; height:223px !important;">
+                                        <div class="product-img-hover pt-5">
+                                            <ul class=" list-inline text-center pl-2 ">
+                                                <a href="BookViewPage.html"><button class="btn--outline--secondary px-4 pt-1 pb-0 an_bold " style="font-size: 18px;" ><b>View</b></button></a>
+                                                <h5 class="mt-2 text-white text-left an_bold">Book's Full Name Here</h6>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-lg-3 col-md-5 col-sm-6 col-6 ">
+                                <div class="product-item-wrap ">
+                                    <div class="product-item position-relative">
+                                        <img src="images/economy book.jpg" alt="" class="img-fluid w-100  shadow" style="border-radius: 20px; height:223px !important;">
+                                        <div class="product-img-hover pt-5">
+                                            <ul class=" list-inline text-center pl-2 ">
+                                                <a href="BookViewPage.html"><button class="btn--outline--secondary px-4 pt-1 pb-0 an_bold " style="font-size: 18px;" ><b>View</b></button></a>
+                                                <h5 class="mt-2 text-white text-left an_bold">Book's Full Name Here</h6>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-lg-3 col-md-5 col-sm-6 col-6  ">
+                                <div class="product-item-wrap ">
+                                    <div class="product-item position-relative">
+                                        <img src="images/law book 3.jpg" alt="" class="img-fluid w-100  shadow" style="border-radius: 20px; height:223px !important;">
+                                        <div class="product-img-hover pt-5">
+                                            <ul class=" list-inline text-center pl-2 ">
+                                                <a href="BookViewPage.html"><button class="btn--outline--secondary px-4 pt-1 pb-0 an_bold " style="font-size: 18px;" ><b>View</b></button></a>
+                                                <h5 class="mt-2 text-white text-left an_bold">Book's Full Name Here</h6>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-lg-3 col-md-5 col-sm-6 col-6  ">
+                                <div class="product-item-wrap ">
+                                    <div class="product-item position-relative">
+                                        <img src="images/book 4.jpg" alt="" class="img-fluid w-100  shadow" style="border-radius: 20px; height:223px !important;">
+                                        <div class="product-img-hover pt-5">
+                                            <ul class=" list-inline text-center pl-2 ">
+                                                <a href="BookViewPage.html"><button class="btn--outline--secondary px-4 pt-1 pb-0 an_bold " style="font-size: 18px;" ><b>View</b></button></a>
+                                                <h5 class="mt-2 text-white text-left an_bold">Book's Full Name Here</h6>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <a href="#" class="text--seven  ml-auto">
+                            <div class="bg--eight px-3 py-2 rounded-circle  shadow" style="position: relative; height: fit-content ; z-index: 1; top: -100px !important;">
+                                <small><i class="fa fa-angle-right fa-2x p-0 m-0  mt-1"></i></small>
+                            </div>
+                        </a>
+                    </div>
+                    <div>
+                        <hr class=" mt-5 ">
+                        <h4 class="an_bold">Most Downloaded Books </h4>
+                    </div>
+                    <div class="row  ">
+                        <a href="#" class="text--seven ">
+                            <div class="bg--eight px-3 py-2 rounded-circle shadow " style="position: relative; height: fit-content ; z-index: 1; top: 100px !important;">
+                                <small><i class="fa fa-angle-left fa-2x p-0 m-0 mt-1 "></i></small>
+                            </div>
+                        </a>
+                        <div class="d-flex py-2 mx-3" style="overflow-x: scroll; margin-top: -40px !important; margin-bottom: -60px !important;">
+                            <div class="col-lg-3 col-md-5 col-sm-6 col-6 ">
+                                <div class="product-item-wrap">
+                                    <div class="product-item position-relative">
+                                        <img src="images/nasa 1.jpg" alt="" class="img-fluid w-100  shadow" style="border-radius: 20px; height:223px !important;">
+                                        <div class="product-img-hover pt-5">
+                                            <ul class=" list-inline text-center pl-2 ">
+                                                <a href="BookViewPage.html"><button class="btn--outline--secondary px-4 pt-1 pb-0 an_bold " style="font-size: 18px;" ><b>View</b></button></a>
+                                                <h5 class="mt-2 text-white text-left an_bold">Book's Full Name Here</h6>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-lg-3 col-md-5 col-sm-6 col-6  ">
+                                <div class="product-item-wrap ">
+                                    <div class="product-item position-relative">
+                                        <img src="images/nasa 2.jpeg" alt="" class="img-fluid w-100  shadow" style="border-radius: 20px; height:223px !important;">
+                                        <div class="product-img-hover pt-5">
+                                            <ul class=" list-inline text-center pl-2 ">
+                                                <a href="BookViewPage.html"><button class="btn--outline--secondary px-4 pt-1 pb-0 an_bold " style="font-size: 18px;" ><b>View</b></button></a>
+                                                <h5 class="mt-2 text-white text-left an_bold">Book's Full Name Here</h6>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-lg-3 col-md-5 col-sm-6 col-6  ">
+                                <div class="product-item-wrap ">
+                                    <div class="product-item position-relative">
+                                        <img src="images/nasa 3.jpg" alt="" class="img-fluid w-100  shadow" style="border-radius: 20px; height:223px !important;">
+                                        <div class="product-img-hover pt-5">
+                                            <ul class=" list-inline text-center pl-2 ">
+                                                <a href="BookViewPage.html"><button class="btn--outline--secondary px-4 pt-1 pb-0 an_bold " style="font-size: 18px;" ><b>View</b></button></a>
+                                                <h5 class="mt-2 text-white text-left an_bold">Book's Full Name Here</h6>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-lg-3 col-md-5 col-sm-6 col-6 ">
+                                <div class="product-item-wrap ">
+                                    <div class="product-item position-relative">
+                                        <img src="images/nasa 4.jpg" alt="" class="img-fluid w-100  shadow" style="border-radius: 20px; height:223px !important;">
+                                        <div class="product-img-hover pt-5">
+                                            <ul class=" list-inline text-center pl-2 ">
+                                                <a href="BookViewPage.html"><button class="btn--outline--secondary px-4 pt-1 pb-0 an_bold " style="font-size: 18px;" ><b>View</b></button></a>
+                                                <h5 class="mt-2 text-white text-left an_bold">Book's Full Name Here</h6>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-lg-3 col-md-5 col-sm-6 col-6 ">
+                                <div class="product-item-wrap ">
+                                    <div class="product-item position-relative">
+                                        <img src="images/nasa 5.jpg" alt="" class="img-fluid w-100  shadow" style="border-radius: 20px; height:223px !important;">
+                                        <div class="product-img-hover pt-5">
+                                            <ul class=" list-inline text-center pl-2 ">
+                                                <a href="BookViewPage.html"><button class="btn--outline--secondary px-4 pt-1 pb-0 an_bold " style="font-size: 18px;" ><b>View</b></button></a>
+                                                <h5 class="mt-2 text-white text-left an_bold">Book's Full Name Here</h6>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <a href="#" class="text--seven  ml-auto">
+                            <div class="bg--eight px-3 py-2 rounded-circle shadow " style="position: relative; height: fit-content ; z-index: 1; top: -100px !important;">
+                                <small><i class="fa fa-angle-right fa-2x p-0 m-0 mt-1 "></i></small>
+                            </div>
+                        </a>
+                    </div>
+                    <div>
+                        <hr class=" mt-5 ">
+                        <h4 class="an_bold mb-0 pb-0">Recently Added Audioes </h4>
+                    </div>
+                    <div class="row">
+                        <div class="col-lg-6 col-md-12 col-sm-12 col-12 mt-4 mt-lg-3 ">
+                            <a href="/AudioVievPage.html" class="nav-link ">
+                                <div class="row shadow rounded " style="background-color:  rgb(243, 243, 243);">
+                                    <div class="col-lg-4 col-md-6 col-sm-6 px-0 shadow ">
+                                        <img src="images/nasa 2.jpeg" class=" rounded  w-100" style="height: 180px !important;" alt="">
+                                    </div>
+                                    <div class="col-lg-8 col-md-6 col-sm-6">
+                                        <h6 class=" text--two mb-0 mt-2 an_bold"><b>Making the Invisible Visible: A History of the spitzer...</b></h6>
+                                        <div class="d-flex mt-1">
+                                            <p class="text-muted mb-0 An_trial ">By</p>
+                                            <p class="pl-2 text--two mb-0 An_trial pb-0 ">Muqada Qurbanzada</p>
+                                        </div>
+                                        <div class="d-flex ">
+                                            <p class="text-muted mb-0  An_trial">Duration:</p>
+                                            <p class="pl-2 text--two mb-0 small">12 h 45 min</p>
+                                        </div>
+                                        <div class="d-flex ">
+                                            <p class=" text-muted mb-0 An_trial">Parts:</p>
+                                            <p class=" pl-2 text--two mb-0 small">6</p>
+                                        </div>
+                                        <div class="d-flex ">
+                                            <p class=" text-muted mb-0 An_trial">Dawnload:</p>
+                                            <p class="pl-2 text--two mb-0 small">125</p>
+                                        </div>
+                                        <div class="">
+                                            <p class=" text--two mb-0 d-flex align-items-center ">
+                                                <small><i class="fa fa-star text--one pr-1 "></i></small>
+                                                <small><i class="fa fa-star text--one pr-1 "></i></small>
+                                                <small><i class="fa fa-star text--one pr-1"></i></small>
+                                                <small><i class="fa fa-star text--one pr-1"></i></small>
+                                                <small><i class="fa fa-star text--six mr-2 "></i></small> 4.1 (66)</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </a>
+                        </div>
+                        <div class="col-lg-6 col-md-12 col-sm-12 col-12 mt-4 mt-lg-3">
+                            <a href="/AudioVievPage.html" class="nav-link ">
+                                <div class="row shadow rounded " style="background-color:  rgb(243, 243, 243);">
+                                    <div class="col-lg-4 col-md-6 col-sm-6 px-0 shadow ">
+                                        <img src="images/nasa 1.jpg" class=" rounded  w-100" style="height: 180px !important;" alt="">
+                                    </div>
+                                    <div class="col-lg-8 col-md-6 col-sm-6">
+                                        <h6 class=" text--two mb-0 mt-2 an_bold"><b>Making the Invisible Visible: A History of the spitzer...</b></h6>
+                                        <div class="d-flex mt-1">
+                                            <p class="text-muted mb-0 An_trial ">By</p>
+                                            <p class="pl-2 text--two mb-0 An_trial ">Muqada Qurbanzada</p>
+                                        </div>
+                                        <div class="d-flex ">
+                                            <p class="text-muted mb-0 An_trial">Duration:</p>
+                                            <p class="pl-2 text--two mb-0 small">12 h 45 min</p>
+                                        </div>
+                                        <div class="d-flex ">
+                                            <p class=" text-muted mb-0 An_trial">Parts:</p>
+                                            <p class=" pl-2 text--two mb-0 small">6</p>
+                                        </div>
+                                        <div class="d-flex ">
+                                            <p class=" text-muted mb-0 An_trial">Dawnload:</p>
+                                            <p class="pl-2 text--two mb-0 small">125</p>
+                                        </div>
+                                        <div class="">
+                                            <p class=" text--two mb-0 d-flex align-items-center ">
+                                                <small><i class="fa fa-star text--one pr-1 "></i></small>
+                                                <small><i class="fa fa-star text--one pr-1 "></i></small>
+                                                <small><i class="fa fa-star text--one pr-1"></i></small>
+                                                <small><i class="fa fa-star text--one pr-1"></i></small>
+                                                <small><i class="fa fa-star text--six mr-2 "></i></small> 4.1 (66)</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="row ">
+                        <div class="col-lg-6 col-md-12 col-sm-12 col-12 mt-4 mt-lg-3 ">
+                            <a href="/AudioVievPage.html" class="nav-link ">
+                                <div class="row shadow rounded " style="background-color:  rgb(243, 243, 243);">
+                                    <div class="col-lg-4 col-md-6 col-sm-6 px-0 shadow ">
+                                        <img src="images/nasa 2.jpeg" class=" rounded  w-100" style="height: 180px !important;" alt="">
+                                    </div>
+                                    <div class="col-lg-8 col-md-6 col-sm-6">
+                                        <h6 class=" text--two mb-0 mt-2 an_bold"><b>Making the Invisible Visible: A History of the spitzer...</b></h6>
+                                        <div class="d-flex mt-1">
+                                            <p class="text-muted mb-0 An_trial ">By</p>
+                                            <p class="pl-2 text--two mb-0 An_trial pb-0 ">Muqada Qurbanzada</p>
+                                        </div>
+                                        <div class="d-flex ">
+                                            <p class="text-muted mb-0  An_trial">Duration:</p>
+                                            <p class="pl-2 text--two mb-0 small">12 h 45 min</p>
+                                        </div>
+                                        <div class="d-flex ">
+                                            <p class=" text-muted mb-0 An_trial">Parts:</p>
+                                            <p class=" pl-2 text--two mb-0 small">6</p>
+                                        </div>
+                                        <div class="d-flex ">
+                                            <p class=" text-muted mb-0 An_trial">Dawnload:</p>
+                                            <p class="pl-2 text--two mb-0 small">125</p>
+                                        </div>
+                                        <div class="">
+                                            <p class=" text--two mb-0 d-flex align-items-center ">
+                                                <small><i class="fa fa-star text--one pr-1 "></i></small>
+                                                <small><i class="fa fa-star text--one pr-1 "></i></small>
+                                                <small><i class="fa fa-star text--one pr-1"></i></small>
+                                                <small><i class="fa fa-star text--one pr-1"></i></small>
+                                                <small><i class="fa fa-star text--six mr-2 "></i></small> 4.1 (66)</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </a>
+                        </div>
+                        <div class="col-lg-6 col-md-12 col-sm-12 col-12 mt-4 mt-lg-3">
+                            <a href="/AudioVievPage.html" class="nav-link ">
+                                <div class="row shadow rounded " style="background-color:  rgb(243, 243, 243);">
+                                    <div class="col-lg-4 col-md-6 col-sm-6 px-0 shadow ">
+                                        <img src="images/nasa 1.jpg" class=" rounded  w-100" style="height: 180px !important;" alt="">
+                                    </div>
+                                    <div class="col-lg-8 col-md-6 col-sm-6">
+                                        <h6 class=" text--two mb-0 mt-2 an_bold"><b>Making the Invisible Visible: A History of the spitzer...</b></h6>
+                                        <div class="d-flex mt-1">
+                                            <p class="text-muted mb-0 An_trial ">By</p>
+                                            <p class="pl-2 text--two mb-0 An_trial ">Muqada Qurbanzada</p>
+                                        </div>
+                                        <div class="d-flex ">
+                                            <p class="text-muted mb-0 An_trial">Duration:</p>
+                                            <p class="pl-2 text--two mb-0 small">12 h 45 min</p>
+                                        </div>
+                                        <div class="d-flex ">
+                                            <p class=" text-muted mb-0 An_trial">Parts:</p>
+                                            <p class=" pl-2 text--two mb-0 small">6</p>
+                                        </div>
+                                        <div class="d-flex ">
+                                            <p class=" text-muted mb-0 An_trial">Dawnload:</p>
+                                            <p class="pl-2 text--two mb-0 small">125</p>
+                                        </div>
+                                        <div class="">
+                                            <p class=" text--two mb-0 d-flex align-items-center ">
+                                                <small><i class="fa fa-star text--one pr-1 "></i></small>
+                                                <small><i class="fa fa-star text--one pr-1 "></i></small>
+                                                <small><i class="fa fa-star text--one pr-1"></i></small>
+                                                <small><i class="fa fa-star text--one pr-1"></i></small>
+                                                <small><i class="fa fa-star text--six mr-2 "></i></small> 4.1 (66)</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-lg-6 col-md-12 col-sm-12 col-12 mt-4 mt-lg-3 ">
+                            <a href="/AudioVievPage.html" class="nav-link ">
+                                <div class="row shadow rounded " style="background-color:  rgb(243, 243, 243);">
+                                    <div class="col-lg-4 col-md-6 col-sm-6 px-0 shadow ">
+                                        <img src="images/nasa 2.jpeg" class=" rounded  w-100" style="height: 180px !important;" alt="">
+                                    </div>
+                                    <div class="col-lg-8 col-md-6 col-sm-6">
+                                        <h6 class=" text--two mb-0 mt-2 an_bold"><b>Making the Invisible Visible: A History of the spitzer...</b></h6>
+                                        <div class="d-flex mt-1">
+                                            <p class="text-muted mb-0 An_trial ">By</p>
+                                            <p class="pl-2 text--two mb-0 An_trial pb-0 ">Muqada Qurbanzada</p>
+                                        </div>
+                                        <div class="d-flex ">
+                                            <p class="text-muted mb-0  An_trial">Duration:</p>
+                                            <p class="pl-2 text--two mb-0 small">12 h 45 min</p>
+                                        </div>
+                                        <div class="d-flex ">
+                                            <p class=" text-muted mb-0 An_trial">Parts:</p>
+                                            <p class=" pl-2 text--two mb-0 small">6</p>
+                                        </div>
+                                        <div class="d-flex ">
+                                            <p class=" text-muted mb-0 An_trial">Dawnload:</p>
+                                            <p class="pl-2 text--two mb-0 small">125</p>
+                                        </div>
+                                        <div class="">
+                                            <p class=" text--two mb-0 d-flex align-items-center ">
+                                                <small><i class="fa fa-star text--one pr-1 "></i></small>
+                                                <small><i class="fa fa-star text--one pr-1 "></i></small>
+                                                <small><i class="fa fa-star text--one pr-1"></i></small>
+                                                <small><i class="fa fa-star text--one pr-1"></i></small>
+                                                <small><i class="fa fa-star text--six mr-2 "></i></small> 4.1 (66)</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </a>
+                        </div>
+                        <div class="col-lg-6 col-md-12 col-sm-12 col-12 mt-4 mt-lg-3">
+                            <a href="/AudioVievPage.html" class="nav-link ">
+                                <div class="row shadow rounded " style="background-color:  rgb(243, 243, 243);">
+                                    <div class="col-lg-4 col-md-6 col-sm-6 px-0 shadow ">
+                                        <img src="images/nasa 1.jpg" class=" rounded  w-100" style="height: 180px !important;" alt="">
+                                    </div>
+                                    <div class="col-lg-8 col-md-6 col-sm-6">
+                                        <h6 class=" text--two mb-0 mt-2 an_bold"><b>Making the Invisible Visible: A History of the spitzer...</b></h6>
+                                        <div class="d-flex mt-1">
+                                            <p class="text-muted mb-0 An_trial ">By</p>
+                                            <p class="pl-2 text--two mb-0 An_trial ">Muqada Qurbanzada</p>
+                                        </div>
+                                        <div class="d-flex ">
+                                            <p class="text-muted mb-0 An_trial">Duration:</p>
+                                            <p class="pl-2 text--two mb-0 small">12 h 45 min</p>
+                                        </div>
+                                        <div class="d-flex ">
+                                            <p class=" text-muted mb-0 An_trial">Parts:</p>
+                                            <p class=" pl-2 text--two mb-0 small">6</p>
+                                        </div>
+                                        <div class="d-flex ">
+                                            <p class=" text-muted mb-0 An_trial">Dawnload:</p>
+                                            <p class="pl-2 text--two mb-0 small">125</p>
+                                        </div>
+                                        <div class="">
+                                            <p class=" text--two mb-0 d-flex align-items-center ">
+                                                <small><i class="fa fa-star text--one pr-1 "></i></small>
+                                                <small><i class="fa fa-star text--one pr-1 "></i></small>
+                                                <small><i class="fa fa-star text--one pr-1"></i></small>
+                                                <small><i class="fa fa-star text--one pr-1"></i></small>
+                                                <small><i class="fa fa-star text--six mr-2 "></i></small> 4.1 (66)</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </a>
+                        </div>
+                    </div>
+
+                    <div>
+                        <hr class=" mt-4 ">
+                        <h4 class="an_bold">Recently Uploaded Article </h4>
+                    </div>
+                    <div>
+                        <div class=" bg--four p-1 rounded my-2  ">
+                            <a href="#" class="text--two nav-link p-0 ">
+                                <h5 class="m-0 An_trial">Share your research data</h5>
+                            </a>
+                        </div>
+                        <div class=" bg--four p-1 rounded my-2  ">
+                            <a href="#" class="text--two nav-link p-0 ">
+                                <h5 class="m-0 Z An_trial">Data in Brife co-submition</h5>
+                            </a>
+                        </div>
+                        <div class=" bg--four p-1 rounded my-2  ">
+                            <a href="#" class="text--two nav-link p-0 ">
+                                <h5 class="m-0 An_trial">Share your research data</h5>
+                            </a>
+                        </div>
+                        <div class=" bg--four p-1 rounded my-2  ">
+                            <a href="#" class="text--two nav-link p-0 ">
+                                <h5 class="m-0 An_trial">Data in Brife co-submition</h5>
+                            </a>
+                        </div>
+                        <div class=" bg--four p-1 rounded my-2  ">
+                            <a href="#" class="text--two nav-link p-0 ">
+                                <h5 class="m-0 An_trial">Share your research data</h5>
+                            </a>
+                        </div>
+                        <div class=" bg--four p-1 rounded my-2  ">
+                            <a href="#" class="text--two nav-link p-0 ">
+                                <h5 class="m-0 An_trial">Data in Brife co-submition</h5>
+                            </a>
+                        </div>
+                        <div class=" bg--four p-1 rounded my-2  ">
+                            <a href="#" class="text--two nav-link p-0 ">
+                                <h5 class="m-0 An_trial">Share your research data</h5>
+                            </a>
+                        </div>
+                        <div class=" bg--four p-1 rounded my-2  ">
+                            <a href="#" class="text--two nav-link p-0 ">
+                                <h5 class="m-0 An_trial">Data in Brife co-submition</h5>
+                            </a>
+                        </div>
+                        <div class=" bg--four p-1 rounded my-2  ">
+                            <a href="#" class="text--two nav-link p-0 ">
+                                <h5 class="m-0 An_trial">Share your research data</h5>
+                            </a>
+                        </div>
+                        <div class=" bg--four p-1 rounded my-2  ">
+                            <a href="#" class="text--two nav-link p-0 ">
+                                <h5 class="m-0 An_trial">Data in Brife co-submition</h5>
+                            </a>
+                        </div>
+                        <hr class="p-0 mt-4 mb-0">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+
+
+    <section class="bg--four py-4">
+        <div class="container">
+            <div class="text-center">
+                <h4 class="an_bold">Popular Quotes</h4>
+            </div>
+            <hr class=" rounded shadow">
+            <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
+
+                <div class="carousel-inner   w-100 ">
+                    <div class="carousel-item active  w-100  ">
+                        <div class="row ">
+                            <div class="col-lg-6 col-md-6 col-sm-6 col-6 my-3 ">
+                                <img src="images/qu1.jpeg" class="img-fluid shadow rounded" alt="">
+                            </div>
+                            <div class="col-lg-6 col-md-6 col-sm-6 col-6 my-3">
+                                <img src="images/qu2.jpeg" class="img-fluid shadow rounded" alt="">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="carousel-item  w-100">
+                        <div class="row ">
+                            <div class="col-lg-6 col-md-6 col-sm-6 col-6 my-3 ">
+                                <img src="images/library.jpg" class="img-fluid shadow rounded" alt="">
+                            </div>
+                            <div class="col-lg-6 col-md-6 col-sm-6 col-6 my-3">
+                                <img src="images/library.jpg" class="img-fluid shadow rounded" alt="">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <a class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev">
+                    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                    <span class="sr-only">Previous</span>
+                </a>
+                <a class="carousel-control-next" href="#carouselExampleIndicators" role="button" data-slide="next">
+                    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                    <span class="sr-only">Next</span>
+                </a>
+            </div>
+        </div>
+    </section>
+
+
+    <section class="bg--six ">
+        <div class="container p-5">
+            <div class="row mx-auto w-50 justify-content-between">
+                <a href="/sign.html"><button class="btn btn-danger bg--one border-0 text--five   px-5 An_Dm_bold " style="border-radius: 30px; font-size: 30px;">Sign Up</button></a>
+                <a href="/login.html"> <button class="btn btn-danger bg--one border-0 text--five px-5 mt-3 mt-lg-0  An_Dm_bold" style="border-radius: 30px; font-size: 30px;"><span class="px-1">Sign In</span></button></a>
+            </div>
+        </div>
+    </section>
+    <footer>
+        <div class="bg--seven py-5">
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-4 pr-lg-4">
+                        <h5 class="text--one An_Dm_bold">About Us</h5>
+                        <span class="border--orange "></span>
+                        <p class="text-white text-justify An_light">Lorem ipsum dolor sit amet consectetur adipisicing elit. Minus maiores quam facere tempore adipisci reiciendis, quasi odio rerum necessitatibus quia error non. Quis, pariatur ducimus vitae consequuntur nostrum cum officiis.</p>
+                    </div>
+                    <div class="col-lg-4 pl-lg-5 pr-4">
+                        <h5 class="text--one  An_Dm_bold">Terms and policy</h5>
+                        <span class="border--orange "></span>
+                        <ul class="text-light An_light pl-4 ">
+                            <li>Lorem ipsum dolor sit amet and we ...</li>
+                            <li>Lorem ipsum dolor sit amet and we to kanoe more it is ...</li>
+                            <li>Lorem ipsum dolor sit amet and we should know ...</li>
+
+                        </ul>
+                    </div>
+                    <div class="col-lg-4 pl-lg-4">
+                        <h5 class="text--one An_Dm_bold">Contact Us</h5>
+                        <span class="border--orange "></span>
+                        <p class="text-white text-justify An_light">Lorem ipsum dolor sit amet consectetur adip</p>
+                        <div>
+                            <a href="#"><img src="Icons/facebook icon.png" class="p-2 bg--six rounded mx-1" width="40px" alt=""></a>
+                            <a href="#"><img src="Icons/instagram icon.png" class="p-2 bg--six rounded mx-1" width="40px" alt=""></a>
+                            <a href="#"><img src="Icons/youtube icon.png" class="px-2 bg--six rounded mx-1" style="padding-top: 11px; padding-bottom: 11px;" width="40px" alt=""></a>
+                            <a href="#"><img src="Icons/website icon.png" class="p-2 bg--six rounded mx-1" width="40px" alt=""></a>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+        <div class="bg--five p-3">
+            <div class="container">
+                <div class="row justify-content-center">
+                    <p class="mb-0 text-white ">Copyright Reserved by <a href="#"><b class="an_bold">ASOFT</b></a> | 2021</p>
+                </div>
+
+            </div>
+
+        </div>
+    </footer>
+
+
+
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+
+    <script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js'></script>
+    <script src="css/bootstrap-4.3.1-dist/js/jquery.min.js"></script>
+    <script src="css/bootstrap-4.3.1-dist/js/bootstrap.min.js"></script>
+    <script src="css/bootstrap-4.3.1-dist/js/bootstrap.bundle.min.js"></script>
+    <script src="css/bootstrap-4.3.1-dist/js/jquery.min.js"></script>
+</body>
+
+</html>

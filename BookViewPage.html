@@ -1,0 +1,778 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Online Library </title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+    <link href='https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css'>
+    <link rel="icon" href="/images/Logo .png">
+    <link rel="stylesheet" href="/css/style.css">
+    <link rel="stylesheet" href="css/fontawesome-free-5.11.2-web/css/all.min.css">
+    <link rel="stylesheet" href="/css/bootstrap-4.3.1-dist/css/bootstrap.min.css">
+</head>
+
+<body>
+    <header>
+        <div class="container  mt-5 ">
+            <div class="row align-items-center w-100 mt-3 mt-lg-0 mt-md-0 pl-3">
+                <div class="col-lg-9 w-100 pr-0 d-flex">
+                    <a class="navbar-brand  text--five ml-2 mr-0 d-none d-lg-block " href="/index.html"><img src="images/Logo .png" class="w-75" alt=""></a>
+                    <div class="bg--four d-flex  rounded   w-100 ">
+                        <div class="dropdown bg--three rounded " style="width: 250px !important; height: 40px !important;">
+                            <a class="nav-link text--five ml-lg-3 d-flex align-items-center pl-2 px-0 An_trial " style="font-size: 22px !important;" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">All catagories <i class="fa fa-angle-down ml-lg-2 ml-2  " style="font-size: 15px;"></i></a>
+                            <div class="dropdown-menu border-0 shadow bg--three text--five" aria-labelledby="navbarDropdown">
+                                <a class="dropdown-item" href="#">BCS</a>
+                                <a class="dropdown-item" href="#">BBA</a>
+                                <a class="dropdown-item" href="#">ENG</a>
+                            </div>
+                        </div>
+                        <div class="input-group rounded  d-flex align-items-center w-100 ">
+                            <input type="text" class="form-control border-0 bg--four An_light py-0" style="font-size: 18px;" id="inlineFormInputGroupUsername2" placeholder="Search by name, author, title">
+                            <div class="input-group-addon  border-0  pr-2"><a href="#" class="my-auto"><i class="fas fa-search text-muted"></i></a></div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-3  pr-0 ">
+                    <div class="d-flex  w-100 mt-3 mt-lg-0  justify-content-between justify-content-lg-start  ">
+                        <!-- Sign up button
+                             <a href="/sign.html"><button class="btn btn-primary bg--one border-0 py-2 px-3  ml-lg-2 ml-md-2 An_Dm_bold" style="font-size: 18px;">Sign up</button></a>
+                       -->
+
+                        <a href="/profile.html" class="nav-link m-0 p-0"><button class="bg-light text--two rounded  py-2 px-4  ml-lg-1 ml-md-2 An_Dm_bold" style="font-size: 18px; border: 1.5px solid #006699 !important;">Profile</button></a>
+
+                        <!-- Button trigger modal -->
+                        <button type="button" class="btn ml-auto btn-primary bg--two border-0 py-2 ml-4 px-3 An_Dm_bold" style="font-size: 18px;" data-toggle="modal" data-target="#exampleModal1">Add New Book</button>
+                        <!-- Modal -->
+                        <div class="modal fade  bg--opcity pr-0  " id="exampleModal1" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                            <div class="modal-dialog  " style=" max-width: 800px !important;" role="document">
+                                <div class="modal-content p-0 border-0">
+                                    <div class="modal-header text-center  bg--two align-items-center border-0 py-2 ">
+                                        <h4 class=" mb-0 text-white text-center w-100 an_bold pt-2" id="exampleModalLabel">Add New Book </h5>
+
+                                            <a href=""><i class="fa fa-window-close text-white" data-dismiss="modal"></i></a>
+                                    </div>
+                                    <div class="modal-body bg--four rounded">
+                                        <form class="px-4">
+                                            <div class="form-group">
+                                                <label for="exampleInputEmail1"><b class="an_bold">Book Full Name <span class="text-danger">*</span></b></label>
+                                                <textarea class="form-control  shadow rounded" placeholder="Book Full Name" id="exampleFormControlTextarea1" rows="2"></textarea>
+                                            </div>
+                                            <div class="form-group">
+                                                <label for="exampleInputEmail1"><b  class="an_bold">Author <span class="text-danger">*</span></b></label>
+                                                <input type="text" class="form-control  shadow rounded" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Author Full Name">
+                                            </div>
+                                            <div class="form-group row  mx-0 ">
+                                                <div class="col-lg-6 col-md-6 col-sm-12 col-12 pr-lg-5 p-0">
+                                                    <label for="exampleInputEmail1"><b  class="an_bold">Number of pages and sessions <span class="text-danger">*</span></b></label>
+                                                    <div class="row mx-0">
+                                                        <div class="bg-light p-2 rounded shadow d-flex w-100 ">
+                                                            <div class="d-flex align-items-center w-100 ">
+
+                                                                <input type="number" class="form-control form-control-sm  bg--four  " id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="0 ... ">
+                                                                <label for="exampleInputEmail1" class="mb-0 mx-1 pr-3 ">Pages</label>
+                                                            </div>
+                                                            <div class="d-flex align-items-center w-100  ">
+                                                                <input type="number" class="form-control form-control-sm  bg--four  " id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="0 ...">
+                                                                <label for="exampleInputEmail1" class="mb-0 mx-1">sessions</label>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="col-lg-3 col-md-3 col-sm-6 col-6 pl-0 pr-lg-5 mt-3 mt-lg-0 mt-md-0">
+                                                    <label for="exampleInputEmail1"><b  class="an_bold">Edition <span class="text-danger">*</span></b></label>
+                                                    <div class="row mx-0">
+                                                        <div class="bg-light p-2 rounded shadow d-flex">
+                                                            <div class="d-flex align-items-center ">
+                                                                <input type="number" class="form-control form-control-sm  bg--four w-100 " id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="0 ... ">
+                                                                <label for="exampleInputEmail1" class="mb-0 mx-1">th</label>
+                                                            </div>
+
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="col-lg-3 col-md-3 col-sm-6 col-6 pl-0 pr-lg-5 pr-0 mt-3 mt-lg-0 mt-md-0 "> <label for="exampleInputEmail1"><b  class="an_bold">Year of publish <span class="text-danger">*</span></b></label>
+
+                                                    <div class="bg-light p-2 rounded shadow w-100">
+                                                        <div class="d-flex align-items-center ">
+                                                            <input type="number" class="form-control form-control-sm  bg--four w-100 " id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="0 ... ">
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="form-group">
+                                                <label for="exampleInputEmail1"><b  class="an_bold">About Author</b></label>
+                                                <textarea class="form-control form-control-sm rounded shadow" placeholder="Example: waris jan please add a simple sentance here to ...." id="exampleFormControlTextarea1" rows="6"></textarea>
+                                                <div class="text-right pr-3 pt-2 text-muted">
+                                                    <h6>0/1000</h6>
+                                                </div>
+                                            </div>
+                                            <div class="form-group">
+                                                <label for="exampleInputEmail1"><b  class="an_bold">About Book </b></label>
+                                                <textarea class="form-control form-control-sm rounded shadow" placeholder="Example: waris jan please add a simple sentance here to ...." id="exampleFormControlTextarea1" rows="6"></textarea>
+                                                <div class="text-right pr-3 pt-2 text-muted">
+                                                    <h6>0/1000</h6>
+                                                </div>
+                                            </div>
+                                            <div class="form-group w-25">
+                                                <label for="exampleFormControlSelect1"><b  class="an_bold">Department <span class="text-danger">*</span></b></label>
+                                                <select class="form-control" id="exampleFormControlSelect1">
+                                                  <option>Computer Sience</option>
+                                                  <option>Engineering</option>
+                                                  <option>BBA</option>
+                                                </select>
+                                            </div>
+                                            <div class="form-group mt-3">
+                                                <label for="exampleInputEmail1"><b  class="an_bold">Catagories <span class="text-danger">*</span></b> <small>(Minimum 1 and Muximum 5)</small></label>
+                                                <div class=" p-4 bg-white shadow rounded row mx-0">
+                                                    <a href="#" class="bg--four px-2 rounded  nav-link py-1 text--seven m-1 An_trial ">CyberSecurity</a>
+                                                    <a href="#" class="bg--four px-2 rounded  nav-link py-1 text--seven m-1 An_trial">IT</a>
+                                                    <a href="#" class="bg--two  px-2 rounded  nav-link py-1 text-white m-1 An_trial">Programing</a>
+                                                    <a href="#" class="bg--four px-2 rounded  nav-link py-1 text--seven m-1 An_trial">Sychology</a>
+                                                    <a href="#" class="bg--four px-2 rounded  nav-link py-1 text--seven m-1 An_trial">History</a>
+                                                    <a href="#" class="bg--four px-2 rounded  nav-link py-1 text--seven m-1 An_trial">Calture</a>
+                                                    <a href="#" class="bg--four px-2 rounded  nav-link py-1 text--seven m-1 An_trial">life</a>
+                                                    <a href="#" class="bg--two  px-2 rounded  nav-link py-1 text-white m-1 An_trial">Engineering</a>
+                                                    <a href="#" class="bg--four px-2 rounded  nav-link py-1 text--seven m-1 An_trial">CyberSecurity</a>
+                                                    <a href="#" class="bg--four px-2 rounded  nav-link py-1 text--seven m-1 An_trial">IT</a>
+                                                    <a href="#" class="bg--four px-2 rounded  nav-link py-1 text--seven m-1 An_trial">Programing</a>
+                                                    <a href="#" class="bg--four px-2 rounded  nav-link py-1 text--seven m-1 An_trial">Sychology</a>
+                                                    <a href="#" class="bg--four px-2 rounded  nav-link py-1 text--seven m-1 An_trial">History</a>
+                                                    <a href="#" class="bg--four px-2 rounded  nav-link py-1 text--seven m-1 An_trial">Calture</a>
+                                                    <a href="#" class="bg--four px-2 rounded  nav-link py-1 text--seven m-1 An_trial">life</a>
+                                                    <a href="#" class="bg--four px-2 rounded  nav-link py-1 text--seven m-1 An_trial">Engineering</a>
+                                                    <a href="#" class="bg--four px-2 rounded  nav-link py-1 text--seven m-1 An_trial">CyberSecurity</a>
+                                                    <a href="#" class="bg--four px-2 rounded  nav-link py-1 text--seven m-1 An_trial">IT</a>
+                                                    <a href="#" class="bg--four px-2 rounded  nav-link py-1 text--seven m-1 An_trial">Programing</a>
+                                                    <a href="#" class="bg--four px-2 rounded  nav-link py-1 text--seven m-1 An_trial">Sychology</a>
+                                                    <a href="#" class="bg--four px-2 rounded  nav-link py-1 text--seven m-1 An_trial">History</a>
+                                                    <a href="#" class="bg--four px-2 rounded  nav-link py-1 text--seven m-1 An_trial">Calture</a>
+                                                    <a href="#" class="bg--four px-2 rounded  nav-link py-1 text--seven m-1 An_trial">life</a>
+                                                    <a href="#" class="bg--four px-2 rounded  nav-link py-1 text--seven m-1 An_trial">Engineering</a>
+                                                    <a href="#" class="bg--four px-2 rounded  nav-link py-1 text--seven m-1 An_trial">CyberSecurity</a>
+                                                    <a href="#" class="bg--four px-2 rounded  nav-link py-1 text--seven m-1 An_trial">IT</a>
+                                                    <a href="#" class="bg--four px-2 rounded  nav-link py-1 text--seven m-1 An_trial">Programing</a>
+                                                    <a href="#" class="bg--four px-2 rounded  nav-link py-1 text--seven m-1 An_trial">Sychology</a>
+                                                    <a href="#" class="bg--four px-2 rounded  nav-link py-1 text--seven m-1 An_trial">History</a>
+                                                    <a href="#" class="bg--four px-2 rounded  nav-link py-1 text--seven m-1 An_trial">Calture</a>
+                                                    <a href="#" class="bg--four px-2 rounded  nav-link py-1 text--seven m-1 An_trial">life</a>
+                                                    <a href="#" class="bg--four px-2 rounded  nav-link py-1 text--seven m-1 An_trial">Engineering</a>
+                                                </div>
+                                                <div class="text-right pr-3 pt-2 text-muted">
+                                                    <h6>2/5</h6>
+                                                </div>
+                                            </div>
+                                            <div class="form-group w-75">
+                                                <label for="exampleFormControlFile1"><b  class="an_bold">Book</b> <small>(pdf file)</small></label>
+
+                                                <div class="w-100 d-flex align-items-center">
+                                                    <label class="custom-file border-0 shadow rounded small bg--two mr-3 text-white w-25 text-center pb-0 pt-1 " style="
+                                                    cursor: pointer;
+                                                ">Upload 
+                                                        <input type="file" id="file2" class="custom-file-input">
+                                                        <span class="custom-file-control"></span>
+                                                      </label>
+                                                    <small>*Note: File size should not be more then 60 MB</small>
+                                                </div>
+                                                <label for="exampleFormControlFile1" class="mt-3">Uploaded: file name which is Uploaded</label>
+                                                <div class="d-flex">
+                                                    <a href="#" class="text--two nav-link p-0">View</a>
+                                                    <a href="#" class="ml-3 text-danger nav-link p-0 ">Delete</a>
+                                                </div>
+                                            </div>
+
+                                            <div class="form-group w-75 mt-4">
+                                                <label for="exampleFormControlFile1"><b class="an_bold">Cover</b> <small>(Jpg, Png, Pdf)</small></label>
+
+                                                <div class="w-100 d-flex align-items-center">
+                                                    <label class="custom-file border-0 shadow rounded small bg--two mr-3 text-white w-25 text-center pb-0 pt-1 " style="
+                                                    cursor: pointer;
+                                                ">Upload 
+                                                        <input type="file" id="file2" class="custom-file-input">
+                                                        <span class="custom-file-control"></span>
+                                                      </label>
+                                                    <small>*Note: File size should be between 500 KB and 2 MB</small>
+                                                </div>
+                                                <label for="exampleFormControlFile1" class="mt-3">Uploaded: file name which is Uploaded</label>
+                                                <div>
+                                                    <img src="images/book 1.png" class="w-25 rounded shadow" alt="">
+                                                </div>
+                                                <a href="#" class="mt-2 text-danger nav-link p-0 ">Delete</a>
+                                            </div>
+                                            <div class="row ml-auto w-100 justify-content-end mr-5 mt-3">
+                                                <button type="button" class="btn btn-primary bg--two border-0  px-5 py-1 btn-sm ">Finsh</button>
+                                            </div>
+
+                                        </form>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- End Modal -->
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="container">
+            <nav class="navbar navbar-expand-lg navbar-light mt-4 ">
+                <a class="navbar-brand mr-4 d-lg-none" href="/index.html"><img src="images/Logo .png" class="w-75" alt=""></a>
+                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                  <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse   ml-lg-4 pl-lg-2 " id="navbarSupportedContent">
+                    <ul class="navbar-nav mx-auto">
+                        <li class="nav-item mx-2 text-center">
+                            <a class="nav-link text--one An_trial pb-0" href="/index.html" style="font-size: 29px; ">Home</a>
+                        </li>
+                        <li class="nav-item mx-2 text-center">
+                            <a class="nav-link text--five An_trial pb-0" style="font-size: 29px; " href="/books.html">Books </a>
+                            <small><small><span class="fa fa-circle  "></span></small></small>
+                        </li>
+                        <li class="nav-item mx-2 text-center">
+                            <a class="nav-link text--one An_trial pb-0" style="font-size: 29px;" href="/audio.html">AudioBook </a>
+                        </li>
+                        <li class="nav-item mx-2 text-center">
+                            <a class="nav-link text--one An_trial pb-0" style="font-size: 29px; " href="/articles.html">Articles</a>
+                        </li>
+
+                        <li class="nav-item mx-2 text-center">
+                            <a class="nav-link text--one An_trial pb-0" style="font-size: 29px;" href="/contact.html">Contacts</a>
+                        </li>
+
+                    </ul>
+                </div>
+            </nav>
+        </div>
+    </header>
+    <section class="bg--eight py-5">
+        <div class="container">
+            <div class="row justify-content-center">
+                <div class=" col-lg-8 col-md-10 col-sm-12 col-12">
+                    <div class="row">
+                        <div class="col-lg-6 col-md-6 col-sm-6">
+                            <img src="/images/book 1.png" class=" rounded shadow" style="height: 90%; width: 90%" alt="">
+                        </div>
+                        <div class="col-lg-6 col-md-6 col-sm-6">
+                            <h3 class="An_Dm_bold">Book Full Name</h3>
+                            <div class="d-flex mt-3">
+                                <p class="pl-1 text-muted mb-0 ">Author: </p>
+                                <p class="pl-4 ml-2 text--two mb-0 ">AuthorName</p>
+                            </div>
+                            <div class="d-flex ">
+                                <p class="pl-1 text-muted mb-0">Upload: </p>
+                                <p class="pl-4  text--two mb-0">&NonBreakingSpace;26 May 2021 by Noorulhaq Elmi </p>
+                            </div>
+                            <div class="d-flex ">
+                                <p class="pl-1 text-muted mb-0">Pages: </p>
+                                <p class="pl-4 ml-2 text--two mb-0">&NonBreakingSpace;527 Pages, 12 sesions </p>
+                            </div>
+                            <div class="d-flex ">
+                                <p class="pl-1 text-muted mb-0">Edit: </p>
+                                <p class="pl-5 ml-1 text--two mb-0">4th edition, 2017 </p>
+                            </div>
+                            <div class="d-flex ">
+                                <p class="pl-1 text-muted mb-0">view: </p>
+                                <p class=" pl-5 text--two mb-0">54321</p>
+                            </div>
+                            <div class="d-flex ">
+                                <p class="pl-1 text-muted mb-0">Dawnload: </p>
+                                <p class="pl-2 text--two mb-0">789 </p>
+                            </div>
+                            <div class="d-flex pb-lg-3">
+                                <p class="pl-1 text-muted mb-0">Ranking: </p>
+                                <p class="pl-4  text--two mb-0 d-flex align-items-center ">
+                                    <small><i class="fa fa-star text--one pr-1 "></i></small>
+                                    <small><i class="fa fa-star text--one pr-1 "></i></small>
+                                    <small><i class="fa fa-star text--one pr-1"></i></small>
+                                    <small><i class="fa fa-star text--one pr-1"></i></small>
+                                    <small><i class="fa fa-star text--six mr-2 "></i></small> 4.1 (66)</p>
+                            </div>
+                            <div class=" pl-1 pt-lg-5 mt-lg-5 pt-4 ">
+                                <a href="#"><button class="btn--outline--secondary btn-lg px-4 py-1 shadow mr-2 an_bold">Read</button></a>
+                                <a href="#"><button class="btn--outline--primary py-1 btn-lg px-4 shadow an_bold">Download</button></a>
+                            </div>
+
+                        </div>
+                    </div>
+                    <div class="pl-1">
+                        <hr>
+                        <h4 class="An_Dm_bold">About author</h4>
+                        <small><p class="text-justify">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Debitis obcaecati quas deserunt corrupti ratione vel nobis hic facere, sequi blanditiis, amet libero soluta assumenda harum repellat? Odio modi a mollitia.
+                                Lorem ipsum dolor, sit amet consectetur adipisicing elit. Facere corporis dicta dolore nihil nesciunt eveniet culpa! Possimus, vero neque? Neque, vero blanditiis. Facere consequuntur modi pariatur quaerat ipsum. Cupiditate, debitis.
+                            </p></small>
+                    </div>
+                    <div class="pl-1 mt-5">
+                        <hr>
+                        <h4 class="An_Dm_bold">About Book</h4>
+                        <small><p class="text-justify">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Debitis obcaecati quas deserunt corrupti ratione vel nobis hic facere, sequi blanditiis, amet libero soluta assumenda harum repellat? Odio modi a </p></small>
+                        <small><p class="text-justify">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Debitis obcaecati quas deserunt corrupti ratione vel nobis hic facere, sequi blanditiis, amet libero soluta assumenda harum repellat? Odio modi a mollitia.
+                                Lorem ipsum dolor, sit amet consectetur adipisicing elit. Facere corporis dicta dolore nihil nesciunt eveniet culpa! Possimus, vero neque? Neque, vero 
+                            </p></small>
+                        <small><p class="text-justify">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Debitis obcaecati quas deserunt corrupti ratione vel nobis hic facere, sequi blanditiis, amet libero soluta assumenda harum repellat? Odio modi a mollitia.
+                                Lorem ipsum dolor, sit amet consectetur adipisicing elit. Facere corporis dicta dolore nihil nesciunt eveniet culpa! Possimus, vero neque? Neque, vero blanditiis. Facere consequuntur modi pariatur quaerat ipsum. Cupiditate, debitis.
+                            </p></small>
+                    </div>
+                    <div>
+                        <hr class="mb-0 pb-1 mt-5 ">
+                        <h4 class="An_Dm_bold">You may also like</h4>
+                    </div>
+                    <div class="row ">
+                        <a href="#" class="text--seven ">
+                            <div class="bg--eight px-3 py-2 rounded-circle  shadow" style="position: relative; height: fit-content ; z-index: 1; top: 85px !important;">
+                                <small><i class="fa fa-angle-left fa-2x p-0 m-0  mt-1"></i></small>
+                            </div>
+                        </a>
+                        <div class="d-flex py-2 mx-3" style="overflow-x: scroll; margin-top: -40px !important; margin-bottom: -60px !important;">
+                            <div class="col-lg-3 col-md-5 col-sm-6 col-6 ">
+                                <div class="product-item-wrap">
+                                    <div class="product-item position-relative">
+                                        <img src="/images/book 1.png" alt="" class="img-fluid w-100  shadow" style="border-radius: 20px; height:200px !important;">
+                                        <div class="product-img-hover pt-5">
+                                            <ul class=" list-inline text-center pl-2 ">
+                                                <a href="BookViewPage.html"><button class="btn--outline--secondary px-4 pt-1 pb-0 an_bold " style="font-size: 18px;" ><b>View</b></button></a>
+                                                <h5 class="mt-2 text-white text-left an_bold">Book's Full Name Here</h6>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-lg-3 col-md-5 col-sm-6 col-6  ">
+                                <div class="product-item-wrap ">
+                                    <div class="product-item position-relative">
+                                        <img src="/images/book 2.png" alt="" class="img-fluid w-100  shadow" style="border-radius: 20px; height:200px !important;">
+                                        <div class="product-img-hover pt-5">
+                                            <ul class=" list-inline text-center pl-2 ">
+                                                <a href="BookViewPage.html"><button class="btn--outline--secondary px-4 pt-1 pb-0 an_bold " style="font-size: 18px;" ><b>View</b></button></a>
+                                                <h5 class="mt-2 text-white text-left an_bold">Book's Full Name Here</h6>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-lg-3 col-md-5 col-sm-6 col-6 ">
+                                <div class="product-item-wrap ">
+                                    <div class="product-item position-relative">
+                                        <img src="/images/book 3.jpg" alt="" class="img-fluid w-100  shadow" style="border-radius: 20px; height:200px !important;">
+                                        <div class="product-img-hover pt-5">
+                                            <ul class=" list-inline text-center pl-2 ">
+                                                <a href="BookViewPage.html"><button class="btn--outline--secondary px-4 pt-1 pb-0 an_bold " style="font-size: 18px;" ><b>View</b></button></a>
+                                                <h5 class="mt-2 text-white text-left an_bold">Book's Full Name Here</h6>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-lg-3 col-md-5 col-sm-6 col-6  ">
+                                <div class="product-item-wrap ">
+                                    <div class="product-item position-relative">
+                                        <img src="/images/book 4.jpg" alt="" class="img-fluid w-100  shadow" style="border-radius: 20px; height:200px !important;">
+                                        <div class="product-img-hover pt-5">
+                                            <ul class=" list-inline text-center pl-2 ">
+                                                <a href="BookViewPage.html"><button class="btn--outline--secondary px-4 pt-1 pb-0 an_bold " style="font-size: 18px;" ><b>View</b></button></a>
+                                                <h5 class="mt-2 text-white text-left an_bold">Book's Full Name Here</h6>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-lg-3 col-md-5 col-sm-6 col-6  ">
+                                <div class="product-item-wrap ">
+                                    <div class="product-item position-relative">
+                                        <img src="/images/book 4.jpg" alt="" class="img-fluid w-100  shadow" style="border-radius: 20px; height:200px !important;">
+                                        <div class="product-img-hover pt-5">
+                                            <ul class=" list-inline text-center pl-2 ">
+                                                <a href="BookViewPage.html"><button class="btn--outline--secondary px-4 pt-1 pb-0 an_bold " style="font-size: 18px;" ><b>View</b></button></a>
+                                                <h5 class="mt-2 text-white text-left an_bold">Book's Full Name Here</h6>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <a href="#" class="text--seven  ml-auto">
+                            <div class="bg--eight px-3 py-2 rounded-circle shadow " style="position: relative; height: fit-content ; z-index: 1; top: -100px !important;">
+                                <small><i class="fa fa-angle-right fa-2x p-0 m-0 mt-1 "></i></small>
+                            </div>
+                        </a>
+                    </div>
+
+                    <div class="pl-1 mt-5">
+                        <hr class="mb-1">
+                        <div class="d-flex justify-content-between align-items-center">
+                            <h4 class="An_Dm_bold">About Book</h4>
+
+                            <!-- Button trigger modal -->
+                            <button type="button" class="btn btn-primary bg--two An_light border-0  ml-4 py-0" data-toggle="modal" data-target="#exampleModal">Add A Reveiw</button>
+
+
+                            <!-- Modal -->
+                            <div class="modal fade bg--opcity   " id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                                <div class="modal-dialog" role="document">
+                                    <div class="modal-content">
+                                        <div class="modal-header text-center bg--four align-items-center py-2 ">
+                                            <h5 class=" mb-0 w-100 text-center An_Dm_bold " id="exampleModalLabel">Add Reveiw</h5>
+                                            <i class="fa fa-window-close text-white " data-dismiss="modal"></i>
+                                        </div>
+                                        <div class="modal-body ">
+                                            <div class="row px-3 ">
+                                                <div class="col-lg-3 col-md-3 col-sm-3 col-3">
+                                                    <img src="/images/book 1.png" class=" rounded shadow img-fluid" alt="">
+                                                </div>
+                                                <div class="col-lg-8 col-md-8 col-sm-8 col-8">
+                                                    <h4 class="mb-0 An_Dm_bold">Book Full Name</h4>
+                                                    <div class="d-flex mt-0">
+                                                        <p class="pl-1 text-muted mb-0 An_Dm_bold">Author: </p>
+                                                        <p class="pl-4 ml-2 text--two mb-0  small">AuthorName</p>
+                                                    </div>
+                                                    <div class="d-flex ">
+                                                        <p class="pl-1 text-muted mb-0 An_Dm_bold">Upload: </p>
+                                                        <p class="pl-4  text--two mb-0 small">&NonBreakingSpace;26 May 2021 by Noorulhaq Elmi </p>
+                                                    </div>
+                                                    <div class="d-flex ">
+                                                        <p class="pl-1 text-muted mb-0 An_Dm_bold">Pages: </p>
+                                                        <p class="pl-4 ml-2 text--two mb-0 small">&NonBreakingSpace;527 Pages, 12 sesions </p>
+                                                    </div>
+                                                    <div class="d-flex ">
+                                                        <p class="pl-1 text-muted mb-0 An_Dm_bold">Edit: </p>
+                                                        <p class="pl-5 ml-1 text--two mb-0 small">4th edition, 2017 </p>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="row mx-3 bg--four px-3 py-1 rounded shadow mt-3 mx-0 justify-content-center">
+                                                <div class="d-flex align-items-center justify-content-center">
+                                                    <h5 class="text-danger mb-0 An_light"><small>Overall Rating *</small></h5>
+                                                    <div class=" d-flex  mx-3 ">
+                                                        <div class=" d-flex">
+                                                            <i class="fa fa-star text--six pr-1 red "></i>
+                                                        </div>
+                                                        <i class="fa fa-star text--six pr-1 orange"></i>
+                                                        <i class="fa fa-star text--six pr-1 yellow"></i>
+                                                        <i class="fa fa-star text--six pr-1 yellowgreen"></i>
+                                                        <i class="fa fa-star text--six mr-2 green "></i>
+                                                    </div>
+                                                    <h6 class="text--seven mb-0 An_Dm_bold"><small>Click on stars to rate</small></h6>
+                                                </div>
+                                            </div>
+                                            <form class="px-3">
+                                                <div class="form-group small mt-5 An_trial">
+                                                    <label for="exampleInputEmail1">Reveiw Title *</label>
+                                                    <input type="text" class="form-control form-control-sm shadow rounded" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Example: it's amazaing">
+                                                </div>
+                                                <div class="form-group small An_trial">
+                                                    <label for="exampleFormControlTextarea1">Reveiw *</label>
+                                                    <textarea class="form-control form-control-sm rounded shadow" placeholder="Example: waris jan please add a simple sentance here to ...." id="exampleFormControlTextarea1" rows="4"></textarea>
+                                                </div>
+                                                <div class="text--five d-flex align-items-center An_trial">
+
+                                                    <label class="small An_trial pt-2">Would you Recommend this book to others? *</label>
+
+                                                    <a href="#" class="p-0 m-0 nav-link bg--four small  text--two rounded shadow px-2 An_trial  ml-2">Yes </a>
+                                                    <a href="#" class="p-0 m-0 nav-link bg--four small  text--two rounded shadow px-2 An_trial  ml-2">No </a>
+
+                                                </div>
+                                            </form>
+                                            <div class="row ml-auto w-100 justify-content-end mr-5 mt-3">
+                                                <button type="button" class="btn btn-primary bg--two border-0 btn-sm  py-1 px-3 An_Dm_bold ">Post Reveiw</button>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row mt-4">
+                            <div class="col-lg-6">
+                                <h6 class="An_Dm_bold">Rating Summary</h6>
+                                <div class="d-flex align-items-center pl-2 ">
+                                    <h6 class="text--two "><small>5&NonBreakingSpace;Star</small></h6>
+                                    <div class="progress rounded border  w-100 mx-2">
+                                        <div class="progress-bar bg--one" role="progressbar" style="width: 69%" aria-valuenow="69" aria-valuemin="0" aria-valuemax="100"></div>
+                                    </div>
+                                    <h6 class="text--two"><small>69%</small></h6>
+                                </div>
+                                <div class="d-flex align-items-center pl-2 ">
+                                    <h6 class="text--two"><small>4&NonBreakingSpace;Star</small></h6>
+                                    <div class="progress rounded border  w-100 mx-2">
+                                        <div class="progress-bar bg--one" role="progressbar" style="width: 15%" aria-valuenow="15" aria-valuemin="0" aria-valuemax="100"></div>
+                                    </div>
+                                    <h6 class="text--two"><small>15%</small></h6>
+                                </div>
+                                <div class="d-flex align-items-center pl-2 ">
+                                    <h6 class="text--two"><small>3&NonBreakingSpace;Star</small></h6>
+                                    <div class="progress rounded border  w-100 mx-2">
+                                        <div class="progress-bar bg--one" role="progressbar" style="width: 10%" aria-valuenow="5" aria-valuemin="0" aria-valuemax="100"></div>
+                                    </div>
+                                    <h6 class="text--two"><small>10%</small></h6>
+                                </div>
+                                <div class="d-flex align-items-center pl-2 ">
+                                    <h6 class="text--two"><small>2&NonBreakingSpace;Star</small></h6>
+                                    <div class="progress rounded border  w-100 ml-2 mr-3">
+                                        <div class="progress-bar bg--one" role="progressbar" style="width: 5%" aria-valuenow="5" aria-valuemin="0" aria-valuemax="100"></div>
+                                    </div>
+                                    <h6 class="text--two"><small>5%</small></h6>
+                                </div>
+                                <div class="d-flex align-items-center pl-2 ">
+                                    <h6 class="text--two"><small>1&NonBreakingSpace;Star</small></h6>
+                                    <div class="progress rounded border  w-100 ml-2 mr-3">
+                                        <div class="progress-bar bg--one" role="progressbar" style="width: 1%" aria-valuenow="1" aria-valuemin="0" aria-valuemax="100"></div>
+                                    </div>
+                                    <h6 class="text--two"><small>1%</small></h6>
+                                </div>
+                            </div>
+                            <div class="col-lg-6 text-center mt-4 mt-lg-0 mt-md-0 ">
+                                <h6 class="An_Dm_bold">Average Customer Rating</h6>
+                                <div class="d-flex align-items-center justify-content-center">
+                                    <h6 class="text--two mb-0 An_Dm_bold"><small>Overall</small></h6>
+                                    <div class=" d-flex  mx-3 ">
+                                        <small><i class="fa fa-star text--one pr-1 "></i></small>
+                                        <small><i class="fa fa-star text--one pr-1 "></i></small>
+                                        <small><i class="fa fa-star text--one pr-1"></i></small>
+                                        <small><i class="fa fa-star text--one pr-1"></i></small>
+                                        <small><i class="fa fa-star text--six mr-2 "></i></small>
+                                    </div>
+                                    <h6 class="text--two mb-0"><small>4.1</small></h6>
+                                </div>
+                                <div class="d-flex align-items-center w-50  justify-content-between mx-auto mt-4 pt-2">
+                                    <h6 class="An_Dm_bold">Total Rate</h6>
+                                    <h6 class="text--two ">32591</h6>
+                                </div>
+
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row bg--four px-3 py-2 rounded shadow  mt-5 mx-0">
+                        <h5 class="mb-0 An_Dm_bold">All Reveiws</h5>
+                    </div>
+                    <hr class="mt-2 ">
+
+                    <div>
+                        <div class="row mx-1">
+                            <div class="media align-items-center">
+                                <img class="mr-3 rounded-circle shadow border" width="6%" src="/images/muqadas.JPG" alt="image">
+                                <div class="media-body d-flex align-items-center">
+                                    <h5 class="mt-0 mb-0 An_Dm_bold">Dr Ashrf Ghani</h5>
+                                    <h6 class="mt-0 mb-0 ml-3 An_Dm_bold"><small><a href=""  data-toggle="modal" data-target="#exampleModal" class="text--two">Edit</a></small></h6>
+                                </div>
+                            </div>
+                            <div class="d-flex align-items-center justify-content-center mt-3">
+                                <div class=" d-flex  mr-3  ">
+                                    <small><i class="fa fa-star text--one pr-1 "></i></small>
+                                    <small><i class="fa fa-star text--one pr-1 "></i></small>
+                                    <small><i class="fa fa-star text--one pr-1"></i></small>
+                                    <small><i class="fa fa-star text--one pr-1"></i></small>
+                                    <small><i class="fa fa-star text--one  "></i></small>
+                                </div>
+                                <h6 class="text-muted mb-0"><small>4 <Span class="An_light">Days Ago</Span></small></h6>
+                            </div>
+                        </div>
+                        <div class="mx-1 mt-2">
+                            <h6 class="An_Dm_bold">I Look This Book </h6>
+                            <p class="text-muted text-justify An_">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Asperiores velit perferendis repellendus sapiente temporibus quidem vitae quae ex consectetur, fugit illo, ratione vero distinctio. Tenetur in vero accusamus natus labore.</p>
+                            <div class="d-flex">
+                                <div class="text--two d-flex align-items-center">
+                                    <i class="fa fa-check-circle mr-1"></i>
+                                    <h5 class="mb-0 An_light"> Yes, <small> I Recommend This Book</small></h6>
+                                </div>
+                                <div class="text--five ml-5 d-flex align-items-center">
+
+                                    <h6 class="mb-0 An_light"><small>Helpful?</small></h6>
+                                    <a href="#" class="p-0 m-0 nav-link bg--four small  text--two rounded shadow px-2   ml-2">Yes . 12</a>
+                                    <a href="#" class="p-0 m-0 nav-link bg--four small  text--two rounded shadow px-2   ml-2">No . 0</a>
+                                </div>
+                            </div>
+                        </div>
+                        <hr>
+                    </div>
+                    <div>
+                        <div class="row mx-1">
+                            <div class="media align-items-center">
+                                <img class="mr-3 rounded-circle shadow border" width="6%" src="/images/muqadas.JPG" alt="image">
+                                <div class="media-body d-flex align-items-center">
+                                    <h5 class="mt-0 mb-0 An_Dm_bold">Dr Ashrf Ghani</h5>
+                                    <h6 class="mt-0 mb-0 ml-3 An_Dm_bold"><small><a href=""  data-toggle="modal" data-target="#exampleModal" class="text--two">Edit</a></small></h6>
+                                </div>
+                            </div>
+                            <div class="d-flex align-items-center justify-content-center mt-3">
+                                <div class=" d-flex  mr-3  ">
+                                    <small><i class="fa fa-star text--one pr-1 "></i></small>
+                                    <small><i class="fa fa-star text--one pr-1 "></i></small>
+                                    <small><i class="fa fa-star text--one pr-1"></i></small>
+                                    <small><i class="fa fa-star text--one pr-1"></i></small>
+                                    <small><i class="fa fa-star text--one  "></i></small>
+                                </div>
+                                <h6 class="text-muted mb-0"><small>4 <Span class="An_light">Days Ago</Span></small></h6>
+                            </div>
+                        </div>
+                        <div class="mx-1 mt-2">
+                            <h6 class="An_Dm_bold">I Look This Book </h6>
+                            <p class="text-muted text-justify An_">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Asperiores velit perferendis repellendus sapiente temporibus quidem vitae quae ex consectetur, fugit illo, ratione vero distinctio. Tenetur in vero accusamus natus labore.</p>
+                            <div class="d-flex">
+                                <div class="text--two d-flex align-items-center">
+                                    <i class="fa fa-check-circle mr-1"></i>
+                                    <h5 class="mb-0 An_light"> Yes, <small> I Recommend This Book</small></h6>
+                                </div>
+                                <div class="text--five ml-5 d-flex align-items-center">
+
+                                    <h6 class="mb-0 An_light"><small>Helpful?</small></h6>
+                                    <a href="#" class="p-0 m-0 nav-link bg--four small  text--two rounded shadow px-2   ml-2">Yes . 12</a>
+                                    <a href="#" class="p-0 m-0 nav-link bg--four small  text--two rounded shadow px-2   ml-2">No . 0</a>
+                                </div>
+                            </div>
+                        </div>
+                        <hr>
+                    </div>
+                    <div>
+                        <div class="row mx-1">
+                            <div class="media align-items-center">
+                                <img class="mr-3 rounded-circle shadow border" width="6%" src="/images/muqadas.JPG" alt="image">
+                                <div class="media-body d-flex align-items-center">
+                                    <h5 class="mt-0 mb-0 An_Dm_bold">Dr Abdullah Abdullah</h5>
+                                    <h6 class="mt-0 mb-0 ml-3 An_Dm_bold"><small><a href=""  data-toggle="modal" data-target="#exampleModal" class="text--two">Edit</a></small></h6>
+                                </div>
+                            </div>
+                            <div class="d-flex align-items-center justify-content-center mt-3">
+                                <div class=" d-flex  mr-3  ">
+                                    <small><i class="fa fa-star text--one pr-1 "></i></small>
+                                    <small><i class="fa fa-star text--one pr-1 "></i></small>
+                                    <small><i class="fa fa-star text--one pr-1"></i></small>
+                                    <small><i class="fa fa-star text--one pr-1"></i></small>
+                                    <small><i class="fa fa-star text--one  "></i></small>
+                                </div>
+                                <h6 class="text-muted mb-0"><small>4 <Span class="An_light">Days Ago</Span></small></h6>
+                            </div>
+                        </div>
+                        <div class="mx-1 mt-2">
+                            <h6 class="An_Dm_bold">I Look This Book </h6>
+                            <p class="text-muted text-justify An_">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Asperiores velit perferendis repellendus sapiente temporibus quidem vitae quae ex consectetur, fugit illo, ratione vero distinctio. Tenetur in vero accusamus natus labore.</p>
+                            <div class="d-flex">
+                                <div class="text--two d-flex align-items-center">
+                                    <i class="fa fa-check-circle mr-1"></i>
+                                    <h5 class="mb-0 An_light"> Yes, <small> I Recommend This Book</small></h6>
+                                </div>
+                                <div class="text--five ml-5 d-flex align-items-center">
+
+                                    <h6 class="mb-0 An_light"><small>Helpful?</small></h6>
+                                    <a href="#" class="p-0 m-0 nav-link bg--four small  text--two rounded shadow px-2   ml-2">Yes . 12</a>
+                                    <a href="#" class="p-0 m-0 nav-link bg--four small  text--two rounded shadow px-2   ml-2">No . 0</a>
+                                </div>
+                            </div>
+                        </div>
+                        <hr>
+                    </div>
+                    <div>
+                        <div class="row mx-1">
+                            <div class="media align-items-center">
+                                <img class="mr-3 rounded-circle shadow border" width="6%" src="/images/muqadas.JPG" alt="image">
+                                <div class="media-body d-flex align-items-center">
+                                    <h5 class="mt-0 mb-0 An_Dm_bold">Barack Obama</h5>
+                                    <h6 class="mt-0 mb-0 ml-3 An_Dm_bold"><small><a href=""  data-toggle="modal" data-target="#exampleModal" class="text--two">Edit</a></small></h6>
+                                </div>
+                            </div>
+                            <div class="d-flex align-items-center justify-content-center mt-3">
+                                <div class=" d-flex  mr-3  ">
+                                    <small><i class="fa fa-star text--one pr-1 "></i></small>
+                                    <small><i class="fa fa-star text--one pr-1 "></i></small>
+                                    <small><i class="fa fa-star text--one pr-1"></i></small>
+                                    <small><i class="fa fa-star text--one pr-1"></i></small>
+                                    <small><i class="fa fa-star text--one  "></i></small>
+                                </div>
+                                <h6 class="text-muted mb-0"><small>4 <Span class="An_light">Days Ago</Span></small></h6>
+                            </div>
+                        </div>
+                        <div class="mx-1 mt-2">
+                            <h6 class="An_Dm_bold">I Look This Book </h6>
+                            <p class="text-muted text-justify An_">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Asperiores velit perferendis repellendus sapiente temporibus quidem vitae quae ex consectetur, fugit illo, ratione vero distinctio. Tenetur in vero accusamus natus labore.</p>
+                            <div class="d-flex">
+                                <div class="text--two d-flex align-items-center">
+                                    <i class="fa fa-check-circle mr-1"></i>
+                                    <h5 class="mb-0 An_light"> Yes, <small> I Recommend This Book</small></h6>
+                                </div>
+                                <div class="text--five ml-5 d-flex align-items-center">
+
+                                    <h6 class="mb-0 An_light"><small>Helpful?</small></h6>
+                                    <a href="#" class="p-0 m-0 nav-link bg--four small  text--two rounded shadow px-2   ml-2">Yes . 12</a>
+                                    <a href="#" class="p-0 m-0 nav-link bg--four small  text--two rounded shadow px-2   ml-2">No . 0</a>
+                                </div>
+                            </div>
+                        </div>
+                        <hr>
+                    </div>
+                    <div class="row bg--four px-3 py-2 rounded shadow justify-content-center  mt-4 mb-5 mx-0">
+                        <a href="#" class="d-flex align-items-center nav-link m-0 p-0 text--five">
+                            <h6 class="mb-0 An_Dm_bold pt-1">See more reveiws</h6>
+                            <i class="fa fa-angle-down  ml-2"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="bg--six ">
+        <div class="container p-5">
+            <div class="row mx-auto w-50 justify-content-between">
+                <a href="/sign.html"><button class="btn btn-danger bg--one border-0 text--five   px-5 An_Dm_bold " style="border-radius: 30px; font-size: 30px;">Sign Up</button></a>
+                <a href="/login.html"> <button class="btn btn-danger bg--one border-0 text--five px-5 mt-3 mt-lg-0  An_Dm_bold" style="border-radius: 30px; font-size: 30px;"><span class="px-1">Sign In</span></button></a>
+            </div>
+        </div>
+    </section>
+    <footer>
+        <div class="bg--seven py-5">
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-4 pr-lg-4">
+                        <h5 class="text--one An_Dm_bold">About Us</h5>
+                        <span class="border--orange "></span>
+                        <p class="text-white text-justify An_light">Lorem ipsum dolor sit amet consectetur adipisicing elit. Minus maiores quam facere tempore adipisci reiciendis, quasi odio rerum necessitatibus quia error non. Quis, pariatur ducimus vitae consequuntur nostrum cum officiis.</p>
+                    </div>
+                    <div class="col-lg-4 pl-lg-5 pr-4">
+                        <h5 class="text--one  An_Dm_bold">Terms and policy</h5>
+                        <span class="border--orange "></span>
+                        <ul class="text-light An_light pl-4 ">
+                            <li>Lorem ipsum dolor sit amet and we ...</li>
+                            <li>Lorem ipsum dolor sit amet and we to kanoe more it is ...</li>
+                            <li>Lorem ipsum dolor sit amet and we should know ...</li>
+
+                        </ul>
+                    </div>
+                    <div class="col-lg-4 pl-lg-4">
+                        <h5 class="text--one An_Dm_bold">Contact Us</h5>
+                        <span class="border--orange "></span>
+                        <p class="text-white text-justify An_light">Lorem ipsum dolor sit amet consectetur adip</p>
+                        <div>
+                            <a href="#"><img src="Icons/facebook icon.png" class="p-2 bg--six rounded mx-1" width="40px" alt=""></a>
+                            <a href="#"><img src="Icons/instagram icon.png" class="p-2 bg--six rounded mx-1" width="40px" alt=""></a>
+                            <a href="#"><img src="Icons/youtube icon.png" class="px-2 bg--six rounded mx-1" style="padding-top: 11px; padding-bottom: 11px;" width="40px" alt=""></a>
+                            <a href="#"><img src="Icons/website icon.png" class="p-2 bg--six rounded mx-1" width="40px" alt=""></a>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+        <div class="bg--five p-3">
+            <div class="container">
+                <div class="row justify-content-center">
+                    <p class="mb-0 text-white ">Copyright Reserved by <a href="#"><b class="an_bold">ASOFT</b></a> | 2021</p>
+                </div>
+
+            </div>
+
+        </div>
+    </footer>
+
+
+
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+
+    <script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js'></script>
+    <script src="/css/bootstrap-4.3.1-dist/js/jquery.min.js"></script>
+    <script src="/css/bootstrap-4.3.1-dist/js/bootstrap.min.js"></script>
+    <script src="/css/bootstrap-4.3.1-dist/js/bootstrap.bundle.min.js"></script>
+    <script src="/css/bootstrap-4.3.1-dist/js/jquery.min.js"></script>
+</body>
+
+</html>
